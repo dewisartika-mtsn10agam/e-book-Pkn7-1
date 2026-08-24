@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendidikan Pancasila - Dewi Sartika S.Pd</title>
+    
+    <!-- Google Fonts: Playfair Display (Luxury) & Inter (Modern) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Luxury Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0B0F19', // Deep Navy Black
+                            800: '#151B2B', // Slightly lighter navy
+                            gold: '#D4AF37', // Classic Gold
+                            goldLight: '#F3E5AB', // Vanilla Gold
+                            goldDark: '#AA8C2C', // Dark Gold
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Luxury Effects */
+        .glass-panel {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hover-luxury {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-luxury:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.3);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        /* Smooth image placeholder styling */
+        .img-placeholder {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #D4AF37;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-luxury-900 text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-luxury-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-luxury-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <span class="font-serif text-2xl font-bold gold-gradient-text">Pancasila</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-300 hover:text-luxury-gold transition-colors duration-300 text-sm uppercase tracking-widest">Beranda</a>
+                    <a href="#tentang" class="text-gray-300 hover:text-luxury-gold transition-colors duration-300 text-sm uppercase tracking-widest">Penulis</a>
+                    <a href="#materi" class="text-gray-300 hover:text-luxury-gold transition-colors duration-300 text-sm uppercase tracking-widest">Materi</a>
+                    <a href="#kontak" class="text-gray-300 hover:text-luxury-gold transition-colors duration-300 text-sm uppercase tracking-widest">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-luxury-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-luxury-gold/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Book Cover Area -->
+                <div class="order-2 lg:order-1 flex justify-center lg:justify-start">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-luxury-gold to-luxury-goldDark rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative w-72 h-96 md:w-80 md:h-[28rem] rounded-lg overflow-hidden shadow-2xl border border-luxury-gold/20">
+                            <!-- GANTI FILE INI: Pastikan file 'cover-buku.png' berada di folder yang sama dengan file HTML ini -->
+                            <img src="cover-buku.png" 
+                                 alt="Cover Buku Pendidikan Pancasila" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            
+                            <!-- Fallback jika gambar belum ada -->
+                            <div class="img-placeholder w-full h-full absolute top-0 left-0 hidden">
+                                <div class="text-center p-6">
+                                    <p class="text-sm uppercase tracking-widest mb-2">Tempatkan File:</p>
+                                    <p class="text-xl font-bold">cover-buku.png</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="order-1 lg:order-2 text-center lg:text-left">
+                    <p class="text-luxury-gold uppercase tracking-[0.2em] text-sm font-semibold mb-4">Buku Ajar Resmi</p>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                        Pendidikan <br>
+                        <span class="gold-gradient-text">Pancasila</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Panduan komprehensif memahami nilai-nilai luhur bangsa, dari latar belakang historis hingga implementasi modern dalam kehidupan bermasyarakat dan bernegara.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <a href="#materi" class="px-8 py-4 bg-luxury-gold hover:bg-luxury-goldDark text-luxury-900 font-semibold rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] uppercase tracking-wider text-sm">
+                            Jelajahi Materi
+                        </a>
+                        <a href="mailto:mydheby@gmail.com" class="px-8 py-4 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold hover:bg-luxury-gold/5 font-semibold rounded-sm transition-all duration-300 uppercase tracking-wider text-sm">
+                            Hubungi Penulis
+                        </a>
+                    </div>
+
+                    <div class="flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500 border-t border-gray-800 pt-6">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            <span>14 Pertemuan</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                            <span>MTsN 10 Agam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section id="tentang" class="py-20 bg-luxury-800/50 border-y border-luxury-gold/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+                
+                <!-- Author Photo Area -->
+                <div class="flex-shrink-0">
+                    <div class="w-48 h-48 rounded-full overflow-hidden border-2 border-luxury-gold/30 p-1">
+                        <div class="w-full h-full rounded-full overflow-hidden relative">
+                            <!-- GANTI FILE INI: Pastikan file 'photo-penulis.png' berada di folder yang sama -->
+                            <img src="photo-penulis.png" 
+                                 alt="Dewi Sartika S.Pd" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            
+                            <!-- Fallback jika gambar belum ada -->
+                            <div class="img-placeholder w-full h-full rounded-full absolute top-0 left-0 hidden text-sm text-center p-4">
+                                photo-penulis.png
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Info -->
+                <div class="text-center md:text-left flex-1">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-2">Dewi Sartika <span class="text-luxury-gold text-2xl">S.Pd</span></h2>
+                    <p class="text-luxury-goldLight uppercase tracking-widest text-sm mb-6">Penulis & Pendidik</p>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Berdedikasi dalam menanamkan nilai-nilai Pancasila kepada generasi muda di <strong class="text-white">MTsN 10 Agam</strong>. Buku ini disusun sebagai panduan pembelajaran yang sistematis, mendalam, dan relevan dengan perkembangan zaman, tanpa meninggalkan akar budaya dan sejarah bangsa.
+                    </p>
+                    <a href="mailto:mydheby@gmail.com" class="inline-flex items-center gap-2 text-luxury-gold hover:text-white transition-colors duration-300">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        mydheby@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents / Materi Section -->
+    <section id="materi" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Daftar <span class="gold-gradient-text">Pertemuan</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Kurikulum terstruktur dalam 14 sesi pembelajaran, dirancang untuk membangun pemahaman yang holistik tentang Pancasila dan kewarganegaraan.</p>
+            </div>
+
+            <!-- Bab 1 -->
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-[1px] bg-luxury-gold"></span>
+                    Bab 1: Sejarah dan Perumusan Pancasila
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pertemuan 1 -->
+                    <a href="1.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 01</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Latar Belakang Nilai-Nilai Pancasila</h4>
+                        <p class="text-gray-500 text-sm">Zaman Kerajaan, Penjajahan, dan Kebangkitan Nasional.</p>
+                    </a>
+                    <!-- Pertemuan 2 -->
+                    <a href="2.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 02</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Proses Kelahiran Pancasila</h4>
+                        <p class="text-gray-500 text-sm">Pembentukan BPUPK, Sidang Pertama, Pidato Soekarno 1 Juni 1945.</p>
+                    </a>
+                    <!-- Pertemuan 3 -->
+                    <a href="3.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 03</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Perumusan oleh Panitia Sembilan</h4>
+                        <p class="text-gray-500 text-sm">Piagam Jakarta sebagai kompromi luhur pendiri bangsa.</p>
+                    </a>
+                    <!-- Pertemuan 4 -->
+                    <a href="4.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 04</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Penetapan sebagai Dasar Negara</h4>
+                        <p class="text-gray-500 text-sm">Peran krusial PPKI dalam mengesahkan Pancasila.</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bab 2 -->
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-[1px] bg-luxury-gold"></span>
+                    Bab 2: Norma, Hak, dan Konstitusi
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Pertemuan 5 -->
+                    <a href="5.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 05</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Norma dalam Kehidupan</h4>
+                        <p class="text-gray-500 text-sm">Norma dalam Kehidupan Bermasyarakat.</p>
+                    </a>
+                    <!-- Pertemuan 6 -->
+                    <a href="6.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 06</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Hak dan Kewajiban Warga Negara</h4>
+                        <p class="text-gray-500 text-sm">Keseimbangan hak dan kewajiban dalam negara hukum.</p>
+                    </a>
+                    <!-- Pertemuan 7 (UTS) -->
+                    <a href="7.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block border-luxury-gold/40 bg-luxury-gold/5">
+                        <span class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2 block flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Pertemuan 07 (UTS)
+                        </span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Ujian Tengah Semester</h4>
+                        <p class="text-gray-500 text-sm">Evaluasi komprehensif Bab 1 dan awal Bab 2.</p>
+                    </a>
+                    <!-- Pertemuan 8 -->
+                    <a href="8.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 08</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">UUD NRI 1945 sebagai Dasar Hukum</h4>
+                        <p class="text-gray-500 text-sm">Kedudukan UUD sebagai hukum tertulis tertinggi.</p>
+                    </a>
+                    <!-- Pertemuan 9 -->
+                    <a href="9.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 09</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Perumusan & Pengesahan UUD 1945</h4>
+                        <p class="text-gray-500 text-sm">Proses historis penyusunan konstitusi pertama.</p>
+                    </a>
+                    <!-- Pertemuan 10 -->
+                    <a href="10.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 10</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Perubahan (Amandemen) UUD 1945</h4>
+                        <p class="text-gray-500 text-sm">Dinamika ketatanegaraan pasca reformasi.</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bab 3 -->
+            <div class="mb-12">
+                <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                    <span class="w-8 h-[1px] bg-luxury-gold"></span>
+                    Bab 3: Negara Kesatuan dan Persatuan
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pertemuan 11 -->
+                    <a href="11.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 11</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Wilayah NKRI</h4>
+                        <p class="text-gray-500 text-sm">Memahami batas dan kedaulatan wilayah Indonesia.</p>
+                    </a>
+                    <!-- Pertemuan 12 -->
+                    <a href="12.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 12</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Indonesia sebagai Negara Kesatuan</h4>
+                        <p class="text-gray-500 text-sm">Prinsip negara kesatuan dalam konteks modern.</p>
+                    </a>
+                    <!-- Pertemuan 13 -->
+                    <a href="13.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block">
+                        <span class="text-xs font-bold text-luxury-gold uppercase tracking-wider mb-2 block">Pertemuan 13</span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Persatuan dan Kesatuan</h4>
+                        <p class="text-gray-500 text-sm">Strategi menjaga keutuhan di tengah keberagaman.</p>
+                    </a>
+                    <!-- Pertemuan 14 (UAS) -->
+                    <a href="14.html" target="_blank" class="glass-panel p-6 rounded-xl hover-luxury group block border-luxury-gold/40 bg-luxury-gold/5">
+                        <span class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2 block flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Pertemuan 14 (UAS)
+                        </span>
+                        <h4 class="text-white font-semibold text-lg mb-2 group-hover:text-luxury-goldLight transition-colors">Ujian Akhir Semester</h4>
+                        <p class="text-gray-500 text-sm">Evaluasi akhir komprehensif seluruh materi.</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-luxury-800 border-t border-luxury-gold/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <span class="font-serif text-2xl font-bold gold-gradient-text block mb-4">Pendidikan Pancasila</span>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Membangun karakter bangsa melalui pemahaman mendalam terhadap nilai-nilai luhur Pancasila dan konstitusi negara.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold uppercase tracking-wider text-sm mb-4">Informasi Sekolah</h4>
+                    <p class="text-gray-400 text-sm mb-2">MTsN 10 Agam</p>
+                    <p class="text-gray-500 text-sm">Kabupaten Agam, Sumatera Barat</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold uppercase tracking-wider text-sm mb-4">Hubungi Penulis</h4>
+                    <p class="text-gray-400 text-sm mb-2">Dewi Sartika S.Pd</p>
+                    <a href="mailto:mydheby@gmail.com" class="text-luxury-gold hover:text-white transition-colors text-sm">mydheby@gmail.com</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-600 text-sm">&copy; 2026 Dewi Sartika S.Pd. Seluruh hak cipta dilindungi undang-undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Scroll Animation Script -->
+    <script>
+        // Smooth reveal on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel').forEach((el) => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

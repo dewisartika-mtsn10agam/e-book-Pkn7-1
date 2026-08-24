@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 1: Latar Belakang Nilai-Nilai Pancasila | Pendidikan Pancasila</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- html2pdf.js untuk fungsi Unduh PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0B0F19',
+                            800: '#151B2B',
+                            700: '#1E293B',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA8C2C',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-luxury {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .custom-radio:checked + div {
+            border-color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        .custom-radio:checked + div .radio-dot {
+            background-color: #D4AF37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .glass-panel { background: white !important; border: 1px solid #ccc !important; color: black !important; }
+            .text-gray-300, .text-gray-400 { color: #333 !important; }
+            .text-white { color: black !important; }
+            .gold-gradient-text { -webkit-text-fill-color: #AA8C2C !important; color: #AA8C2C !important; }
+        }
+        /* Custom Scrollbar for Tables */
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #151B2B; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-luxury-900 text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-luxury-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-luxury-gold/10 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span class="font-serif font-semibold">Kembali ke Daftar Isi</span>
+                </a>
+                <a href="2.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <span class="font-serif font-semibold">Pertemuan 2</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="content-to-print">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-12 border-b border-luxury-gold/20 pb-8">
+            <span class="inline-block px-4 py-1 rounded-full bg-luxury-gold/10 text-luxury-gold text-xs font-bold uppercase tracking-widest mb-4 border border-luxury-gold/20">Bab 1: Sejarah dan Perumusan Pancasila</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Pertemuan 01</h1>
+            <h2 class="font-serif text-2xl md:text-3xl gold-gradient-text mb-6">Latar Belakang Nilai-Nilai Pancasila</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
+                Memahami akar historis nilai-nilai luhur bangsa Indonesia yang telah ada sejak zaman kerajaan, masa penjajahan, hingga bangkitnya kesadaran nasional. Materi ini menjadi fondasi penting dalam memahami identitas, jati diri, dan filosofis negara.
+            </p>
+            <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Dewi Sartika, S.Pd</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <span>MTsN 10 Agam</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section A -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> A. Nilai Pancasila pada Zaman Kerajaan
+            </h3>
+            
+            <!-- Teori Pendukung -->
+            <div class="glass-panel p-6 rounded-xl mb-6 border-l-4 border-luxury-gold">
+                <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Teori Pendukung: Klasifikasi Nilai (Prof. Dr. Notonagoro)
+                </h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                    Sebelum menelusuri sejarah, penting memahami bahwa nilai adalah sesuatu yang berharga, baik, dan benar yang menjadi pedoman hidup. Menurut Notonagoro, nilai dibagi menjadi tiga:
+                </p>
+                <ul class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <li class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10"><strong class="text-luxury-gold">1. Nilai Material:</strong> Segala sesuatu yang berguna bagi unsur fisik manusia (makanan, tempat tinggal).</li>
+                    <li class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10"><strong class="text-luxury-gold">2. Nilai Vital:</strong> Segala sesuatu yang berguna bagi manusia untuk mengadakan kegiatan atau aktivitas.</li>
+                    <li class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10"><strong class="text-luxury-gold">3. Nilai Kerohanian:</strong> Kebenaran (cipta), Keindahan (rasa), Kebaikan (karsa), dan Religius (keyakinan).</li>
+                </ul>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Nilai-nilai Pancasila tidak lahir secara tiba-tiba pada tahun 1945. Akar-akarnya telah tertanam kuat dalam kehidupan masyarakat Nusantara sejak zaman kerajaan, yang tercermin dalam sistem pemerintahan, kehidupan sosial, dan kepercayaan.
+            </p>
+
+            <!-- Tabel Jejak Nilai -->
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Kerajaan</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Bukti Historis / Artefak</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Nilai Pancasila yang Tercermin</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kerajaan Kutai</td>
+                            <td class="p-4">Prasasti Yupa (Abad ke-4 M). Raja Mulawarman memberikan sedekah 20.000 ekor sapi kepada kaum Brahmana.</td>
+                            <td class="p-4"><strong>Sila 1:</strong> Kehidupan beragama yang dihormati.<br><strong>Sila 3:</strong> Gotong royong dan kedermawanan.</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kerajaan Sriwijaya</td>
+                            <td class="p-4">Pusat pendidikan agama Buddha internasional (I-Tsing). Kerajaan maritim yang toleran di Selat Malaka.</td>
+                            <td class="p-4"><strong>Sila 2:</strong> Kemanusiaan yang adil dan beradab (terbuka pada dunia).<br><strong>Sila 5:</strong> Keadilan sosial dalam perdagangan.</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kerajaan Majapahit</td>
+                            <td class="p-4">Kitab Sutasoma (Mpu Tantular) & Sumpah Palapa (Gajah Mada). Konsep "Bhinneka Tunggal Ika".</td>
+                            <td class="p-4"><strong>Sila 3:</strong> Persatuan Indonesia (cita-cita mempersatukan Nusantara).<br><strong>Sila 2:</strong> Toleransi antarumat beragama (Hindu-Buddha).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section B -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> B. Nilai Perjuangan pada Zaman Penjajahan
+            </h3>
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold mb-6">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Pada masa penjajahan (Portugis, Belanda, Jepang), rakyat Indonesia tidak tinggal diam. Muncul berbagai perlawanan heroik yang menunjukkan nilai cinta tanah air dan rela berkorban. Namun, perlawanan ini memiliki karakteristik dan kelemahan tertentu.
+                </p>
+            </div>
+
+            <!-- Tabel Perbandingan -->
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Aspek</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Perlawanan Kedaerahan (Sebelum 1908)</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Pergerakan Nasional (Setelah 1908)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Sifat Perlawanan</td>
+                            <td class="p-4">Fisik, bersenjata, bergantung pada pemimpin kharismatik (Pangeran Diponegoro, Imam Bonjol).</td>
+                            <td class="p-4">Organisatoris, modern, menggunakan diplomasi, pendidikan, dan pers.</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Cakupan Wilayah</td>
+                            <td class="p-4">Lokal / Kedaerahan (hanya di satu wilayah tertentu).</td>
+                            <td class="p-4">Nasional (meliputi seluruh wilayah Hindia Belanda/Indonesia).</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Faktor Kegagalan</td>
+                            <td class="p-4">1. Tidak ada koordinasi antar daerah.<br>2. Kalah persenjataan.<br>3. Politik adu domba (<em>devide et impera</em>).<br>4. Pemimpin ditangkap/diwafatkan.</td>
+                            <td class="p-4">Lebih berhasil dalam membangun kesadaran, meski kemerdekaan baru tercapai pada 1945 melalui proses panjang.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                <p class="text-sm text-gray-400 italic flex items-start gap-2">
+                    <span class="text-luxury-gold text-lg">💡</span>
+                    <span><strong>Referensi Pendukung:</strong> Menurut Prof. Dr. Sartono Kartodirdjo dalam bukunya "Pengantar Sejarah Indonesia Baru: 1500-1900", gerakan protes atau perlawanan pada masa kolonial sering kali bersifat "milenarisme" (mengharapkan datangnya ratu adil) dan belum memiliki kesadaran nasional yang terstruktur.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section C -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> C. Kebangkitan Nasional (1908)
+            </h3>
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Kebangkitan Nasional ditandai dengan perubahan strategi perjuangan dari fisik/kedaerahan menjadi perjuangan melalui organisasi modern dan diplomasi. Perubahan ini didorong oleh dua faktor utama:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-luxury-gold rounded-full"></span> Faktor Internal
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Penderitaan rakyat akibat penjajahan yang panjang.</li>
+                        <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Munculnya golongan terpelajar (akibat Politik Etis/Balasan Budi).</li>
+                        <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Kenangan akan kejayaan masa lalu (Sriwijaya & Majapahit).</li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-luxury-gold rounded-full"></span> Faktor Eksternal
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Kemenangan Jepang atas Rusia (1905), membuktikan bangsa Asia bisa mengalahkan bangsa Eropa.</li>
+                        <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Masuknya paham-paham baru: Liberalisme, Nasionalisme, Demokrasi, dan Sosialisme.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tabel Organisasi -->
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Nama Organisasi</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Tahun & Pendiri</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Fokus Perjuangan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Budi Utomo (BU)</td>
+                            <td class="p-4">20 Mei 1908<br><span class="text-xs text-gray-500">dr. Soetomo & Mahasiswa STOVIA</span></td>
+                            <td class="p-4">Awalnya pendidikan dan kebudayaan Jawa, menjadi pelopor kesadaran nasional. (Hari Kebangkitan Nasional).</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Sarekat Dagang Islam (SDI)</td>
+                            <td class="p-4">1905 / 1911<br><span class="text-xs text-gray-500">H. Samanhoedi (Solo)</span></td>
+                            <td class="p-4">Ekonomi: Melindungi pedagang batik pribumi dari persaingan pedagang Tionghoa. Berkembang menjadi gerakan politik (SI).</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Indische Partij (IP)</td>
+                            <td class="p-4">1912<br><span class="text-xs text-gray-500">Tiga Serangkai (Douwes Dekker, Cipto Mangunkusumo, Ki Hajar Dewantara)</span></td>
+                            <td class="p-4">Politik: Organisasi pertama yang secara terang-terangan menuntut kemerdekaan Indonesia.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section D: Relevansi (New) -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> D. Relevansi Nilai Sejarah di Era Modern
+            </h3>
+            <div class="glass-panel p-6 rounded-xl">
+                <p class="text-gray-300 mb-4">Nilai-nilai perjuangan masa lalu tidak usang, melainkan bertransformasi sesuai tantangan zaman. Berikut adalah contoh relevansinya:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">Dari Gotong Royong Fisik</h5>
+                        <p class="text-xs text-gray-400">Menjadi <strong>"Gotong Royong Digital"</strong>, seperti penggalangan dana bencana (crowdfunding) atau kerja sama tim dalam proyek virtual.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">Dari Perlawanan Senjata</h5>
+                        <p class="text-xs text-gray-400">Bertransformasi menjadi <strong>"Perlawanan Intelektual"</strong>: berprestasi di kancah internasional, menguasai teknologi, dan menolak hoaks.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">Dari Bhinneka Tunggal Ika</h5>
+                        <p class="text-xs text-gray-400">Menjadi <strong>literasi digital yang inklusif</strong>: menghargai perbedaan pendapat di media sosial tanpa melakukan perundungan (cyberbullying).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Terms, Quote & References -->
+        <section class="mb-12">
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">◆ Kata Kunci Pertemuan Ini</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Nilai Kerohanian</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Bhinneka Tunggal Ika</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Perlawanan Kedaerahan</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Politik Etis</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Kebangkitan Nasional</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Budi Utomo</span>
+                </div>
+            </div>
+            
+            <div class="text-center p-8 border-t border-b border-luxury-gold/20 bg-luxury-gold/5 rounded-xl mb-6">
+                <p class="font-serif text-xl text-luxury-goldLight italic mb-3">"Sesungguhnya Kami menciptakan kamu dari seorang laki-laki dan seorang perempuan, kemudian Kami jadikan kamu berbangsa-bangsa dan bersuku-suku supaya kamu saling mengenal."</p>
+                <p class="text-sm text-luxury-gold font-semibold">— QS. Al-Hujurat [49]: 13</p>
+            </div>
+
+            <!-- Referensi Pendukung -->
+            <div class="glass-panel p-6 rounded-xl border border-luxury-gold/10">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">📚 Daftar Referensi Pendukung</h4>
+                <ul class="text-sm text-gray-400 space-y-2 list-decimal list-inside">
+                    <li>Kaelan, & Zubaidi, A. (2016). <em>Pendidikan Kewarganegaraan untuk Perguruan Tinggi</em>. Yogyakarta: Paradigma.</li>
+                    <li>Notonagoro. (1974). <em>Pancasila Secara Ilmiah Populer</em>. Jakarta: Pantjuran Tujuh.</li>
+                    <li>Kartodirdjo, S. (1973). <em>Pengantar Sejarah Indonesia Baru: 1500-1900</em>. Jakarta: Gramedia.</li>
+                    <li>Ricklefs, M.C. (2008). <em>Sejarah Indonesia Modern 1200–2008</em>. Jakarta: Serambi Ilmu Semesta.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- UJI FORMATIF SECTION -->
+        <section id="uji-formatif" class="mt-16 scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl font-bold text-white mb-2">📝 Uji Formatif Pertemuan 1</h2>
+                <p class="text-gray-400 text-sm">Evaluasi Pemahaman Sejarah & Nilai-Nilai Pancasila</p>
+                <div class="mt-4 inline-flex items-center gap-4 text-xs text-gray-500 bg-luxury-800 px-4 py-2 rounded-full border border-luxury-gold/10">
+                    <span>📋 Bagian A: Pilihan Ganda (10 soal, 10 poin/soal)</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>✍️ Bagian B: Essay (5 soal, 20 poin/soal)</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 md:p-8 rounded-2xl border border-luxury-gold/20">
+                <!-- Identitas -->
+                <div class="mb-8 pb-6 border-b border-gray-700">
+                    <h3 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+                        Identitas Siswa
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Nama Lengkap *</label>
+                            <input type="text" id="namaSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">No. Absen / NIS *</label>
+                            <input type="text" id="nisSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Contoh: 12345">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Kelas *</label>
+                            <select id="kelasSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                                <option value="">Pilih Kelas</option>
+                                <option value="VII-A">VII-A</option>
+                                <option value="VII-B">VII-B</option>
+                                <option value="VII-C">VII-C</option>
+                                <option value="VII-D">VII-D</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Tanggal</label>
+                            <input type="date" id="tanggalUjian" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">📋 Bagian A: Pilihan Ganda</h3>
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Kerajaan di Nusantara yang dikenal dengan semboyan "Bhinneka Tunggal Ika" sebagai wujud toleransi adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Sriwijaya</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Kutai</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Majapahit</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Tarumanegara</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Salah satu nilai Pancasila yang tercermin pada masa kerajaan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Gotong royong dan toleransi beragama</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Individualisme dan persaingan bebas</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Feodalisme mutlak tanpa hukum</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Pemisahan total antar suku bangsa</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Perlawanan rakyat terhadap penjajah pada awalnya bersifat kedaerahan. Hal ini menyebabkan perlawanan mudah dipatahkan karena...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Senjata penjajah terlalu canggih</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Tidak adanya persatuan dan koordinasi antar daerah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Rakyat tidak memiliki pemimpin</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Penjajah memberikan upah yang tinggi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Organisasi pergerakan nasional pertama yang menandai kebangkitan nasional Indonesia adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Sarekat Islam</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Budi Utomo</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Indische Partij</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Muhammadiyah</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Tahun 1908 dianggap sebagai awal Kebangkitan Nasional karena...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Munculnya kesadaran berorganisasi modern yang bersifat nasional</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Indonesia berhasil mengusir semua penjajah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Berdirinya kerajaan baru di Jawa</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Dibukanya sekolah-sekolah Belanda untuk semua rakyat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">6. Sarekat Islam awalnya didirikan oleh H. Samanhoedi di Solo dengan nama...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Sarekat Dagang Islam</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Perhimpunan Indonesia</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Partai Nasional Indonesia</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Nahdlatul Ulama</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">7. Nilai ketuhanan pada masa kerajaan dapat dilihat dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Pemaksaan agama oleh raja kepada rakyat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Kerukunan antar umat beragama di pelabuhan-pelabuhan kerajaan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Larangan beribadah bagi pendatang</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Hancurnya tempat ibadah minoritas</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">8. Salah satu ciri perlawanan pada masa penjajahan sebelum tahun 1908 adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Menggunakan jalur diplomasi internasional</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Bergantung pada pemimpin kharismatik dan bersifat lokal</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Memiliki struktur organisasi yang rapi dan modern</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Didukung oleh seluruh rakyat Nusantara secara serentak</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">9. Peristiwa yang menunjukkan semangat persatuan pemuda di masa kebangkitan nasional adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Perang Diponegoro</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Pembentukan organisasi kedaerahan seperti Jong Java yang kemudian melebur ke arah nasional</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Penyerangan benteng Belanda oleh rakyat setempat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Pengasingan tokoh-tokoh pejuang ke Banda</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">10. Tujuan utama mempelajari latar belakang nilai Pancasila adalah agar...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">A. Kita dapat menghafal tahun-tahun penting saja</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">B. Kita mengetahui kelemahan kerajaan masa lalu</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">C. Kita dapat mengamalkan nilai-nilai luhur bangsa dalam kehidupan sehari-hari</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent transition-all"></div></div><span class="text-gray-300 text-sm">D. Kita bisa meniru strategi perang penjajah</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">✍️ Bagian B: Essay</h3>
+                    <div class="space-y-6">
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Jelaskan bagaimana nilai gotong royong dan toleransi diterapkan pada masa Kerajaan Sriwijaya atau Majapahit! (20 Poin)</p>
+                            <textarea id="essay1" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Berdasarkan tabel perbandingan, sebutkan 3 (tiga) faktor utama penyebab kegagalan perlawanan kedaerahan sebelum tahun 1908! (20 Poin)</p>
+                            <textarea id="essay2" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Jelaskan perbedaan antara faktor internal dan faktor eksternal yang mendorong terjadinya Kebangkitan Nasional pada tahun 1908! (20 Poin)</p>
+                            <textarea id="essay3" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Bagaimana peran organisasi Budi Utomo dalam mengubah bentuk perlawanan bangsa Indonesia dari kedaerahan menjadi nasional? (20 Poin)</p>
+                            <textarea id="essay4" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Berikan 2 (dua) contoh konkret bagaimana relevansi nilai perjuangan masa lalu dapat diterapkan oleh siswa di era digital saat ini! (20 Poin)</p>
+                            <textarea id="essay5" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div id="hasil-container" class="hidden mb-8 p-6 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl">
+                    <h3 class="text-luxury-gold font-serif text-xl font-bold mb-4 text-center">📊 Hasil Uji Formatif</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-4">
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Pilihan Ganda</p>
+                            <p class="text-2xl font-bold text-white"><span id="skor-pg">0</span> / 100</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Essay</p>
+                            <p class="text-2xl font-bold text-luxury-goldLight">Menunggu Penilaian Guru</p>
+                            <p class="text-xs text-gray-500 mt-1">(Maksimal 100)</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-luxury-gold">
+                            <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Skor Akhir Sementara</p>
+                            <p class="text-3xl font-bold gold-gradient-text"><span id="skor-total">0</span></p>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-400 italic">*Skor total saat ini hanya menghitung Bagian A. Bagian Essay akan dinilai secara manual oleh guru.</p>
+                </div>
+
+                <!-- Tombol Aksi -->
+                <div class="flex flex-col md:flex-row gap-4 no-print">
+                    <button onclick="hitungNilai()" class="flex-1 bg-luxury-gold hover:bg-luxury-goldDark text-luxury-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        KIRIM JAWABAN & LIHAT HASIL
+                    </button>
+                    <button onclick="unduhPDF()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH PDF LENGKAP
+                    </button>
+                    <button onclick="unduhTXT()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH SKOR (TXT)
+                    </button>
+                    <button onclick="kirimEmail()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        KIRIM KE EMAIL GURU
+                    </button>
+                    <button onclick="resetForm()" class="md:w-auto w-full bg-red-900/30 hover:bg-red-900/50 border border-red-500/30 text-red-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        MULAI ULANG
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-800 border-t border-luxury-gold/10 pt-12 pb-8 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="index.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Daftar Isi Buku
+                </a>
+                <a href="2.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    Selanjutnya: Pertemuan 2
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm mb-2">© 2026 Dewi Sartika, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+                <a href="mailto:mydheby@gmail.com" class="text-luxury-gold hover:text-white transition-colors text-sm">mydheby@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set default date to today
+        document.getElementById('tanggalUjian').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawaban = {
+            q1: 'C', q2: 'A', q3: 'B', q4: 'B', q5: 'A',
+            q6: 'A', q7: 'B', q8: 'B', q9: 'B', q10: 'C'
+        };
+
+        let skorPG = 0;
+        let skorEssay = 0; // Menunggu penilaian guru
+
+        function hitungNilai() {
+            const nama = document.getElementById('namaSiswa').value;
+            const nis = document.getElementById('nisSiswa').value;
+            const kelas = document.getElementById('kelasSiswa').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let benar = 0;
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === kunciJawaban[`q${i}`]) {
+                    benar++;
+                }
+            }
+
+            skorPG = benar * 10;
+            const totalSkor = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').textContent = skorPG;
+            document.getElementById('skor-total').textContent = totalSkor;
+            document.getElementById('hasil-container').classList.remove('hidden');
+            
+            // Scroll to results
+            document.getElementById('hasil-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`Terima kasih, ${nama}! Jawaban Pilihan Ganda Anda telah dinilai. Skor sementara: ${totalSkor} (Bagian Essay menunggu penilaian guru).`);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('content-to-print');
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            
+            const opt = {
+                margin: 10,
+                filename: `Uji_Formatif_Pertemuan1_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Temporary hide buttons for clean PDF
+            const buttons = document.querySelectorAll('.no-print');
+            buttons.forEach(b => b.style.display = 'none');
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restore buttons
+                buttons.forEach(b => b.style.display = '');
+            });
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('namaSiswa').value || 'Tidak diisi';
+            const nis = document.getElementById('nisSiswa').value || 'Tidak diisi';
+            const kelas = document.getElementById('kelasSiswa').value || 'Tidak diisi';
+            const tanggal = document.getElementById('tanggalUjian').value || new Date().toLocaleDateString('id-ID');
+
+            let isiTxt = `=== LAPORAN HASIL UJI FORMATIF ===\n`;
+            isiTxt += `Mata Pelajaran: Pendidikan Pancasila\n`;
+            isiTxt += `Pertemuan 1: Latar Belakang Nilai-Nilai Pancasila\n`;
+            isiTxt += `===================================\n\n`;
+            isiTxt += `Nama    : ${nama}\n`;
+            isiTxt += `NIS     : ${nis}\n`;
+            isiTxt += `Kelas   : ${kelas}\n`;
+            isiTxt += `Tanggal : ${tanggal}\n\n`;
+            isiTxt += `--- HASIL PENILAIAN ---\n`;
+            isiTxt += `Skor Pilihan Ganda : ${skorPG} / 100\n`;
+            isiTxt += `Skor Essay         : Menunggu Penilaian Guru (Maks 100)\n`;
+            isiTxt += `Total Skor Sementara: ${skorPG + skorEssay}\n\n`;
+            isiTxt += `--- JAWABAN ESSAY ---\n`;
+            for(let i=1; i<=5; i++) {
+                isiTxt += `Essay ${i}: ${document.getElementById(`essay${i}`).value || '(Tidak dijawab)'}\n\n`;
+            }
+            isiTxt += `===================================\n`;
+            isiTxt += `Dikirim otomatis dari Sistem Uji Formatif Digital\n`;
+            isiTxt += `MTsN 10 Agam | Dewi Sartika, S.Pd`;
+
+            const blob = new Blob([isiTxt], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Ujian_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            const kelas = document.getElementById('kelasSiswa').value || 'Kelas';
+            const total = skorPG + skorEssay;
+            
+            const subject = `Laporan Nilai Uji Formatif Pertemuan 1 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Dewi Sartika, S.Pd,\n\nBerikut adalah laporan hasil uji formatif saya:\n\nNama: ${nama}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${skorPG}/100\nSkor Total Sementara: ${total}\n\nMohon konfirmasi untuk penilaian bagian Essay.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:mydheby@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm('Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+                document.querySelectorAll('textarea').forEach(textarea => textarea.value = '');
+                document.getElementById('namaSiswa').value = '';
+                document.getElementById('nisSiswa').value = '';
+                document.getElementById('kelasSiswa').value = '';
+                document.getElementById('tanggalUjian').valueAsDate = new Date();
+                document.getElementById('hasil-container').classList.add('hidden');
+                skorPG = 0;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
