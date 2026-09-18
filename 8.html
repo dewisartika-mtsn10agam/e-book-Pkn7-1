@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 8: UUD NRI Tahun 1945 sebagai Dasar Hukum Tertulis | Pendidikan Pancasila</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0B0F19',
+                            800: '#151B2B',
+                            700: '#1E293B',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA8C2C',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-luxury { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .custom-radio:checked + div {
+            border-color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        .custom-radio:checked + div .radio-dot {
+            background-color: #D4AF37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .glass-panel { background: white !important; border: 1px solid #ccc !important; color: black !important; }
+            .text-gray-300, .text-gray-400 { color: #333 !important; }
+            .text-white { color: black !important; }
+            .gold-gradient-text { -webkit-text-fill-color: #AA8C2C !important; color: #AA8C2C !important; }
+        }
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #151B2B; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+        
+        /* Hierarki piramida */
+        .pyramid-level {
+            transition: all 0.3s ease;
+        }
+        .pyramid-level:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-luxury-900 text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-luxury-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-luxury-gold/10 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="7.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span class="font-serif font-semibold">Ujian Tengah Semester</span>
+                </a>
+                <a href="9.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <span class="font-serif font-semibold">Pertemuan 9</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="content-to-print">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-12 border-b border-luxury-gold/20 pb-8">
+            <span class="inline-block px-4 py-1 rounded-full bg-luxury-gold/10 text-luxury-gold text-xs font-bold uppercase tracking-widest mb-4 border border-luxury-gold/20">Bab 2: Norma, Hak, dan Konstitusi</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Pertemuan 08</h1>
+            <h2 class="font-serif text-2xl md:text-3xl gold-gradient-text mb-6">UUD NRI Tahun 1945 sebagai Dasar Hukum Tertulis</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
+                Memahami kedudukan, fungsi, dan sistematika Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 sebagai hukum dasar tertulis tertinggi yang menjadi fondasi penyelenggaraan negara, pembatas kekuasaan, serta jaminan hak asasi manusia bagi seluruh warga negara Indonesia.
+            </p>
+            <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Dewi Sartika, S.Pd</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <span>MTsN 10 Agam</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section A: Pengertian UUD -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> A. Pengertian Undang-Undang Dasar
+            </h3>
+            
+            <!-- Teori Pendukung -->
+            <div class="glass-panel p-6 rounded-xl mb-6 border-l-4 border-luxury-gold">
+                <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Teori Pendukung: Hierarki Norma Hukum
+                </h4>
+                <div class="space-y-3 text-sm text-gray-400">
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Hans Kelsen (Stufenbau Theorie):</strong> Sistem hukum suatu negara bersifat berjenjang (hierarkis). Norma yang lebih rendah bersumber dan tidak boleh bertentangan dengan norma yang lebih tinggi. Puncak hierarki ini disebut <em class="text-luxury-goldLight">Grundnorm</em> (norma dasar).</span></p>
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Hans Nawiasky (Theorie von Stufenordnung):</strong> Negara memiliki 4 tingkatan norma: <em>Staatsfundamentalnorm</em> (Pancasila), <em>Staatsgrundgesetze</em> (UUD), <em>Formele Wet</em> (UU), dan <em>Verordnung & Autonome Satzung</em> (peraturan pelaksana).</span></p>
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Prof. Jimly Asshiddiqie:</strong> Konstitusi (UUD) adalah hukum dasar tertulis yang memuat ketentuan tentang penyelenggaraan negara, pembagian kekuasaan, serta jaminan hak-hak warga negara.</span></p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                <strong class="text-white">Undang-Undang Dasar (UUD)</strong> adalah hukum dasar tertulis yang menjadi pedoman tertinggi dalam penyelenggaraan suatu negara. UUD memuat ketentuan-ketentuan pokok tentang struktur negara, pembagian kekuasaan, hak asasi manusia, serta tujuan negara. Di Indonesia, UUD yang berlaku adalah <strong class="text-luxury-gold">UUD NRI Tahun 1945</strong>.
+            </p>
+
+            <div class="bg-luxury-900/50 p-5 rounded-lg border border-luxury-gold/20 mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Ciri-Ciri UUD NRI 1945 sebagai Hukum Dasar Tertulis
+                </h4>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-300">
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Disusun secara tertulis dan resmi oleh lembaga berwenang (PPKI).</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Berkedudukan sebagai hukum tertinggi dalam tata urutan perundang-undangan.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Bersifat rigid (sulit diubah) — memerlukan proses khusus untuk amandemen.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Memuat norma, aturan, dan ketentuan yang mengikat seluruh warga negara.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section B: Kedudukan UUD -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> B. Kedudukan UUD NRI 1945 dalam Hierarki Hukum
+            </h3>
+            
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Berdasarkan <strong class="text-white">UU No. 12 Tahun 2011</strong> tentang Pembentukan Peraturan Perundang-undangan (sebagaimana telah diubah dengan UU No. 13 Tahun 2022), UUD NRI Tahun 1945 berkedudukan sebagai <strong class="text-luxury-gold">hukum dasar tertulis tertinggi</strong> di Indonesia. Seluruh peraturan di bawahnya tidak boleh bertentangan dengan UUD.
+            </p>
+
+            <!-- Piramida Hierarki -->
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    Hierarki Peraturan Perundang-Undangan di Indonesia
+                </h4>
+                <div class="space-y-2 max-w-2xl mx-auto">
+                    <div class="pyramid-level bg-luxury-gold text-luxury-900 p-4 rounded-lg text-center font-bold mx-auto w-full">
+                        <p class="text-xs uppercase tracking-wider opacity-75">Tingkat Tertinggi</p>
+                        <p class="text-lg">UUD NRI Tahun 1945</p>
+                    </div>
+                    <div class="pyramid-level bg-luxury-gold/80 text-luxury-900 p-3 rounded-lg text-center font-semibold mx-auto w-[92%]">
+                        <p class="text-sm">Ketetapan MPR (Tap MPR)</p>
+                    </div>
+                    <div class="pyramid-level bg-luxury-gold/60 text-luxury-900 p-3 rounded-lg text-center font-semibold mx-auto w-[84%]">
+                        <p class="text-sm">Undang-Undang (UU) / Perppu</p>
+                    </div>
+                    <div class="pyramid-level bg-luxury-gold/40 text-white p-3 rounded-lg text-center font-semibold mx-auto w-[76%]">
+                        <p class="text-sm">Peraturan Pemerintah (PP)</p>
+                    </div>
+                    <div class="pyramid-level bg-luxury-gold/30 text-white p-3 rounded-lg text-center font-semibold mx-auto w-[68%]">
+                        <p class="text-sm">Peraturan Presiden (Perpres)</p>
+                    </div>
+                    <div class="pyramid-level bg-luxury-gold/20 text-white p-3 rounded-lg text-center font-semibold mx-auto w-[60%]">
+                        <p class="text-sm">Peraturan Daerah (Perda) Provinsi</p>
+                    </div>
+                    <div class="pyramid-level bg-luxury-gold/10 text-white p-3 rounded-lg text-center font-semibold mx-auto w-[52%]">
+                        <p class="text-sm">Perda Kabupaten/Kota</p>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 italic text-center mt-4">Sumber: UU No. 12 Tahun 2011 jo. UU No. 13 Tahun 2022</p>
+            </div>
+
+            <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                <p class="text-sm text-gray-400 italic flex items-start gap-2">
+                    <span class="text-luxury-gold text-lg">💡</span>
+                    <span><strong>Prinsip Lex Superior Derogat Legi Inferiori:</strong> Dalam ilmu hukum, peraturan yang lebih tinggi kedudukannya akan mengesampingkan peraturan yang lebih rendah jika terjadi pertentangan. Artinya, tidak satu pun peraturan di Indonesia yang boleh bertentangan dengan UUD NRI 1945.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section C: Sistematika UUD 1945 -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> C. Sistematika UUD NRI Tahun 1945
+            </h3>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Sistematika UUD NRI 1945 mengalami perubahan signifikan setelah dilakukan <strong class="text-white">amandemen</strong> sebanyak empat kali (1999-2002). Perubahan ini bertujuan menyempurnakan tata pengaturan agar lebih demokratis dan menjamin HAM secara lebih komprehensif.
+            </p>
+
+            <!-- Tabel Perbandingan -->
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+                <span class="text-luxury-gold">◆</span> Perbandingan Sistematika Sebelum dan Sesudah Amandemen
+            </h4>
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Aspek</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Sebelum Amandemen (1945-1999)</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Sesudah Amandemen (1999-2002)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Struktur</td>
+                            <td class="p-4">Pembukaan, Batang Tubuh (16 bab, 37 pasal, 4 pasal peralihan, 2 pasal tambahan), Penjelasan</td>
+                            <td class="p-4">Pembukaan dan Pasal-pasal (21 bab, 73 pasal, 3 pasal peralihan, 1 pasal tambahan)</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Jumlah Pasal</td>
+                            <td class="p-4">37 pasal asli</td>
+                            <td class="p-4">73 pasal (mengalami penambahan signifikan)</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Bagian Penjelasan</td>
+                            <td class="p-4">Terdapat bagian Penjelasan resmi</td>
+                            <td class="p-4">Bagian Penjelasan <strong class="text-luxury-goldLight">ditiadakan</strong></td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">HAM</td>
+                            <td class="p-4">Diatur secara singkat (Pasal 27-34)</td>
+                            <td class="p-4">Diatur secara rinci (Pasal 28A-28J) — 10 pasal khusus HAM</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Sistem Pemerintahan</td>
+                            <td class="p-4">Presidensial dengan kekuasaan Presiden sangat besar</td>
+                            <td class="p-4">Presidensial dengan <em>checks and balances</em> yang lebih seimbang</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Detail Sistematika Setelah Amandemen -->
+            <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Sistematika UUD NRI 1945 Setelah Amandemen
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                    <div class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Bagian 1</p>
+                        <p class="text-white font-semibold">Pembukaan</p>
+                        <p class="text-xs text-gray-400">Terdiri dari 4 alinea (memuat Pancasila di alinea IV)</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Bagian 2</p>
+                        <p class="text-white font-semibold">Pasal-pasal</p>
+                        <p class="text-xs text-gray-400">21 bab, 73 pasal, 3 pasal peralihan, 1 pasal tambahan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Amandemen -->
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Kronologi Amandemen UUD NRI 1945
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border-l-2 border-luxury-gold">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Amandemen Pertama</p>
+                        <p class="text-white font-semibold">19 Oktober 1999</p>
+                        <p class="text-xs text-gray-400 mt-1">Membatasi kekuasaan Presiden dan memperkuat peran DPR.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border-l-2 border-luxury-gold">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Amandemen Kedua</p>
+                        <p class="text-white font-semibold">18 Agustus 2000</p>
+                        <p class="text-xs text-gray-400 mt-1">Menambahkan bab khusus tentang HAM (28A-28J), DPD, dan BPK.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border-l-2 border-luxury-gold">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Amandemen Ketiga</p>
+                        <p class="text-white font-semibold">10 November 2001</p>
+                        <p class="text-xs text-gray-400 mt-1">Mengatur pemilihan Presiden langsung, pembentukan MK dan KY.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border-l-2 border-luxury-gold">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Amandemen Keempat</p>
+                        <p class="text-white font-semibold">10 Agustus 2002</p>
+                        <p class="text-xs text-gray-400 mt-1">Penyempurnaan akhir: penghapusan DPA, pengaturan pendidikan, perekonomian.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Fungsi dan Peran UUD -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> D. Fungsi dan Peran UUD NRI 1945
+            </h3>
+            
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold mb-6">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    UUD NRI 1945 memiliki beberapa fungsi vital dalam kehidupan bernegara, antara lain:
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Menentukan ketentuan dasar</strong> tentang penyelenggaraan negara.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Membatasi kekuasaan</strong> penyelenggara negara agar tidak terjadi kesewenang-wenangan.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Menjamin hak asasi manusia</strong> bagi seluruh warga negara.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Menjadi sumber hukum</strong> bagi peraturan perundang-undangan di bawahnya.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Sebagai alat kontrol</strong> terhadap norma hukum yang lebih rendah.</li>
+                </ul>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">⚖️ Fungsi Konstitutive</h5>
+                    <p class="text-xs text-gray-400">UUD sebagai dasar berdirinya negara dan penyelenggaraan pemerintahan.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🛡️ Fungsi Protektif</h5>
+                    <p class="text-xs text-gray-400">UUD melindungi HAM warga negara dari kesewenang-wenangan penguasa.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">📜 Fungsi Normatif</h5>
+                    <p class="text-xs text-gray-400">UUD menjadi pedoman normatif bagi seluruh penyelenggaraan negara.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section E: Relevansi Era Modern -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> E. UUD 1945 di Era Digital dan Global
+            </h3>
+            <div class="glass-panel p-6 rounded-xl">
+                <p class="text-gray-300 mb-4">Meskipun disusun pada tahun 1945, UUD NRI 1945 tetap relevan dalam menghadapi tantangan era digital dan globalisasi:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🔐 Perlindungan Data Pribadi</h5>
+                        <p class="text-xs text-gray-400">Pasal 28G menjamin hak atas perlindungan diri — menjadi dasar UU Pelindungan Data Pribadi.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">💻 Kebebasan Informasi</h5>
+                        <p class="text-xs text-gray-400">Pasal 28F menjamin hak berkomunikasi dan memperoleh informasi — relevan dengan era digital.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🌏 Keadilan Global</h5>
+                        <p class="text-xs text-gray-400">Pembukaan UUD alinea I ("menentang penjajahan") relevan dengan isu HAM global dan keadilan internasional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Terms, Quote & References -->
+        <section class="mb-12">
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">◆ Kata Kunci Pertemuan Ini</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">UUD 1945</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Hukum Dasar Tertulis</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Hierarki Hukum</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Amandemen</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Grundnorm</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Konstitusi</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Pembukaan</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Pasal-pasal</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Checks and Balances</span>
+                </div>
+            </div>
+            
+            <div class="text-center p-8 border-t border-b border-luxury-gold/20 bg-luxury-gold/5 rounded-xl mb-6">
+                <p class="font-serif text-xl text-luxury-goldLight italic mb-3">"Hai orang-orang yang beriman, taatilah Allah dan taatilah Rasul (Nya), dan ulil amri di antara kamu..."</p>
+                <p class="text-sm text-luxury-gold font-semibold">— QS. An-Nisa [4]: 59</p>
+                <p class="text-xs text-gray-500 mt-2 italic">Ayat ini mengingatkan pentingnya menaati hukum dan peraturan yang berlaku — termasuk konstitusi sebagai hukum tertinggi negara.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-luxury-gold/10">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">📚 Daftar Referensi Pendukung</h4>
+                <ul class="text-sm text-gray-400 space-y-2 list-decimal list-inside">
+                    <li>Asshiddiqie, Jimly. (2006). <em>Konstitusi dan Konstitusionalisme Indonesia</em>. Jakarta: Sinar Grafika.</li>
+                    <li>Kaelan. (2013). <em>Pendidikan Pancasila</em>. Yogyakarta: Paradigma.</li>
+                    <li>Republik Indonesia. (2011). <em>Undang-Undang No. 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-undangan</em>.</li>
+                    <li>Republik Indonesia. (1945). <em>Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 (dalam perubahan)</em>.</li>
+                    <li>Kelsen, Hans. (1967). <em>Pure Theory of Law</em>. Berkeley: University of California Press.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- UJI FORMATIF SECTION -->
+        <section id="uji-formatif" class="mt-16 scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl font-bold text-white mb-2">📝 Uji Formatif Pertemuan 8</h2>
+                <p class="text-gray-400 text-sm">Evaluasi Pemahaman UUD NRI 1945 sebagai Dasar Hukum Tertulis</p>
+                <div class="mt-4 inline-flex items-center gap-4 text-xs text-gray-500 bg-luxury-800 px-4 py-2 rounded-full border border-luxury-gold/10">
+                    <span>📋 Bagian A: Pilihan Ganda (10 soal, 10 poin/soal)</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>✍️ Bagian B: Essay (5 soal, 20 poin/soal)</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 md:p-8 rounded-2xl border border-luxury-gold/20">
+                <!-- Identitas -->
+                <div class="mb-8 pb-6 border-b border-gray-700">
+                    <h3 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+                        Identitas Siswa
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Nama Lengkap *</label>
+                            <input type="text" id="namaSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">No. Absen / NIS *</label>
+                            <input type="text" id="nisSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Contoh: 12345">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Kelas *</label>
+                            <select id="kelasSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                                <option value="">Pilih Kelas</option>
+                                <option value="VII-A">VII-A</option>
+                                <option value="VII-B">VII-B</option>
+                                <option value="VII-C">VII-C</option>
+                                <option value="VII-D">VII-D</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Tanggal</label>
+                            <input type="date" id="tanggalUjian" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">📋 Bagian A: Pilihan Ganda</h3>
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Undang-Undang Dasar (UUD) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Hukum dasar tertulis tertinggi dalam suatu negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Peraturan yang dibuat oleh kepala desa</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Peraturan perusahaan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Aturan tidak tertulis dalam masyarakat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Dalam hierarki peraturan perundang-undangan Indonesia, UUD NRI 1945 berkedudukan sebagai...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Hukum dasar tertulis tertinggi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Peraturan setingkat dengan UU</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Peraturan di bawah Perpres</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Peraturan daerah</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Sistematika UUD NRI 1945 setelah amandemen terdiri dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Pembukaan, Batang Tubuh, dan Penjelasan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Pembukaan dan Pasal-pasal</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Pembukaan, Batang Tubuh, dan Lampiran</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mukadimah dan Pasal-pasal</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. UUD NRI 1945 telah mengalami amandemen sebanyak...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 2 kali</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 3 kali</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 4 kali</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 5 kali</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Amandemen pertama UUD NRI 1945 dilakukan pada tanggal...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 19 Oktober 1999</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 18 Agustus 2000</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 10 November 2001</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 10 Agustus 2002</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">6. Salah satu fungsi utama UUD NRI 1945 adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Membatasi kekuasaan penyelenggara negara dan menjamin HAM</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Memberikan kekuasaan mutlak kepada Presiden</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Mengatur kehidupan pribadi warga negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Menghapuskan hak asasi manusia</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">7. Jumlah pasal dalam UUD NRI 1945 setelah amandemen adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 37 pasal</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 54 pasal</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 73 pasal</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 100 pasal</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">8. Pada amandemen kedua UUD 1945 (18 Agustus 2000), ditambahkan bab khusus tentang...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Pertahanan negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Hak Asasi Manusia (Pasal 28A-28J)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Pemerintahan daerah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Perekonomian nasional</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">9. Menurut teori Hans Nawiasky, UUD NRI 1945 dalam hierarki norma hukum berkedudukan sebagai...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Staatsfundamentalnorm (norma dasar negara)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Staatsgrundgesetze (hukum dasar negara)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Formele Wet (undang-undang formal)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Rechtsverordning (peraturan pelaksana)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">10. Pasal 28F UUD NRI 1945 yang menjamin hak berkomunikasi dan memperoleh informasi sangat relevan dengan era...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Era agraris</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Era industri</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Era digital dan globalisasi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Era feodal</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">✍️ Bagian B: Essay</h3>
+                    <div class="space-y-6">
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Jelaskan pengertian UUD NRI 1945 dan sebutkan ciri-cirinya sebagai hukum dasar tertulis tertinggi! (20 Poin)</p>
+                            <textarea id="essay1" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Jelaskan hierarki peraturan perundang-undangan di Indonesia menurut UU No. 12 Tahun 2011! Sebutkan minimal 5 tingkat hierarki! (20 Poin)</p>
+                            <textarea id="essay2" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Jelaskan perbedaan sistematika UUD NRI 1945 sebelum dan sesudah amandemen! (20 Poin)</p>
+                            <textarea id="essay3" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Sebutkan dan jelaskan 3 (tiga) fungsi utama UUD NRI 1945 dalam kehidupan bernegara! (20 Poin)</p>
+                            <textarea id="essay4" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Berikan 2 (dua) contoh relevansi UUD NRI 1945 dalam menghadapi tantangan era digital saat ini! (20 Poin)</p>
+                            <textarea id="essay5" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div id="hasil-container" class="hidden mb-8 p-6 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl">
+                    <h3 class="text-luxury-gold font-serif text-xl font-bold mb-4 text-center">📊 Hasil Uji Formatif</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-4">
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Pilihan Ganda</p>
+                            <p class="text-2xl font-bold text-white"><span id="skor-pg">0</span> / 100</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Essay</p>
+                            <p class="text-2xl font-bold text-luxury-goldLight">Menunggu Penilaian Guru</p>
+                            <p class="text-xs text-gray-500 mt-1">(Maksimal 100)</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-luxury-gold">
+                            <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Skor Akhir Sementara</p>
+                            <p class="text-3xl font-bold gold-gradient-text"><span id="skor-total">0</span></p>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-400 italic">*Skor total saat ini hanya menghitung Bagian A. Bagian Essay akan dinilai secara manual oleh guru.</p>
+                </div>
+
+                <!-- Tombol Aksi -->
+                <div class="flex flex-col md:flex-row gap-4 no-print">
+                    <button onclick="hitungNilai()" class="flex-1 bg-luxury-gold hover:bg-luxury-goldDark text-luxury-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        KIRIM JAWABAN & LIHAT HASIL
+                    </button>
+                    <button onclick="unduhPDF()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH PDF LENGKAP
+                    </button>
+                    <button onclick="unduhTXT()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH SKOR (TXT)
+                    </button>
+                    <button onclick="kirimEmail()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        KIRIM KE EMAIL GURU
+                    </button>
+                    <button onclick="resetForm()" class="md:w-auto w-full bg-red-900/30 hover:bg-red-900/50 border border-red-500/30 text-red-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        MULAI ULANG
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-800 border-t border-luxury-gold/10 pt-12 pb-8 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="7.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    UTS
+                </a>
+                <a href="index.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Daftar Isi
+                </a>
+                <a href="9.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    Pertemuan 9
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm mb-2">© 2026 Dewi Sartika, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+                <a href="mailto:mydheby@gmail.com" class="text-luxury-gold hover:text-white transition-colors text-sm">mydheby@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.getElementById('tanggalUjian').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawaban = {
+            q1: 'A',  // Hukum dasar tertulis tertinggi
+            q2: 'A',  // Hukum dasar tertulis tertinggi
+            q3: 'B',  // Pembukaan dan Pasal-pasal
+            q4: 'C',  // 4 kali
+            q5: 'A',  // 19 Oktober 1999
+            q6: 'A',  // Membatasi kekuasaan & menjamin HAM
+            q7: 'C',  // 73 pasal
+            q8: 'B',  // HAM (28A-28J)
+            q9: 'B',  // Staatsgrundgesetze
+            q10: 'C'  // Era digital
+        };
+
+        let skorPG = 0;
+        let skorEssay = 0;
+
+        function hitungNilai() {
+            const nama = document.getElementById('namaSiswa').value;
+            const nis = document.getElementById('nisSiswa').value;
+            const kelas = document.getElementById('kelasSiswa').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let benar = 0;
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === kunciJawaban[`q${i}`]) {
+                    benar++;
+                }
+            }
+
+            skorPG = benar * 10;
+            const totalSkor = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').textContent = skorPG;
+            document.getElementById('skor-total').textContent = totalSkor;
+            document.getElementById('hasil-container').classList.remove('hidden');
+            
+            document.getElementById('hasil-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`Terima kasih, ${nama}! Jawaban Pilihan Ganda Anda telah dinilai. Skor sementara: ${totalSkor} (Bagian Essay menunggu penilaian guru).`);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('content-to-print');
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            
+            const opt = {
+                margin: 10,
+                filename: `Uji_Formatif_Pertemuan8_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            const buttons = document.querySelectorAll('.no-print');
+            buttons.forEach(b => b.style.display = 'none');
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                buttons.forEach(b => b.style.display = '');
+            });
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('namaSiswa').value || 'Tidak diisi';
+            const nis = document.getElementById('nisSiswa').value || 'Tidak diisi';
+            const kelas = document.getElementById('kelasSiswa').value || 'Tidak diisi';
+            const tanggal = document.getElementById('tanggalUjian').value || new Date().toLocaleDateString('id-ID');
+
+            let isiTxt = `=== LAPORAN HASIL UJI FORMATIF ===\n`;
+            isiTxt += `Mata Pelajaran: Pendidikan Pancasila\n`;
+            isiTxt += `Pertemuan 8: UUD NRI 1945 sebagai Dasar Hukum Tertulis\n`;
+            isiTxt += `===================================\n\n`;
+            isiTxt += `Nama    : ${nama}\n`;
+            isiTxt += `NIS     : ${nis}\n`;
+            isiTxt += `Kelas   : ${kelas}\n`;
+            isiTxt += `Tanggal : ${tanggal}\n\n`;
+            isiTxt += `--- HASIL PENILAIAN ---\n`;
+            isiTxt += `Skor Pilihan Ganda : ${skorPG} / 100\n`;
+            isiTxt += `Skor Essay         : Menunggu Penilaian Guru (Maks 100)\n`;
+            isiTxt += `Total Skor Sementara: ${skorPG + skorEssay}\n\n`;
+            isiTxt += `--- JAWABAN ESSAY ---\n`;
+            for(let i=1; i<=5; i++) {
+                isiTxt += `Essay ${i}: ${document.getElementById(`essay${i}`).value || '(Tidak dijawab)'}\n\n`;
+            }
+            isiTxt += `===================================\n`;
+            isiTxt += `Dikirim otomatis dari Sistem Uji Formatif Digital\n`;
+            isiTxt += `MTsN 10 Agam | Dewi Sartika, S.Pd`;
+
+            const blob = new Blob([isiTxt], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Ujian_Pertemuan8_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            const kelas = document.getElementById('kelasSiswa').value || 'Kelas';
+            const total = skorPG + skorEssay;
+            
+            const subject = `Laporan Nilai Uji Formatif Pertemuan 8 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Dewi Sartika, S.Pd,\n\nBerikut adalah laporan hasil uji formatif saya:\n\nNama: ${nama}\nKelas: ${kelas}\nMateri: UUD NRI 1945 sebagai Dasar Hukum Tertulis\nSkor Pilihan Ganda: ${skorPG}/100\nSkor Total Sementara: ${total}\n\nMohon konfirmasi untuk penilaian bagian Essay.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:mydheby@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm('Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+                document.querySelectorAll('textarea').forEach(textarea => textarea.value = '');
+                document.getElementById('namaSiswa').value = '';
+                document.getElementById('nisSiswa').value = '';
+                document.getElementById('kelasSiswa').value = '';
+                document.getElementById('tanggalUjian').valueAsDate = new Date();
+                document.getElementById('hasil-container').classList.add('hidden');
+                skorPG = 0;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
