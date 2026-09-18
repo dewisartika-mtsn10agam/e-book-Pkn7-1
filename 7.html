@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Tengah Semester (UTS) | Pendidikan Pancasila</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0B0F19',
+                            800: '#151B2B',
+                            700: '#1E293B',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA8C2C',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .custom-radio:checked + div, .custom-checkbox:checked + div {
+            border-color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        .custom-radio:checked + div .radio-dot, .custom-checkbox:checked + div .check-dot {
+            background-color: #D4AF37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+        .badge-hots {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .badge-lots {
+            background: rgba(212, 175, 55, 0.15);
+            color: #D4AF37;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .glass-panel { background: white !important; border: 1px solid #ccc !important; }
+            .text-gray-300, .text-gray-400 { color: #333 !important; }
+            .text-white { color: black !important; }
+        }
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #151B2B; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-luxury-900 text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-luxury-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-luxury-gold/10 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="6.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span class="font-serif font-semibold">Pertemuan 6</span>
+                </a>
+                <a href="8.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <span class="font-serif font-semibold">Pertemuan 8</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="content-to-print">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-12 border-b border-luxury-gold/20 pb-8">
+            <span class="inline-block px-4 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-bold uppercase tracking-widest mb-4 border border-red-500/20">Evaluasi Tengah Semester</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Ujian Tengah Semester</h1>
+            <h2 class="font-serif text-2xl md:text-3xl gold-gradient-text mb-6">Pendidikan Pancasila</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
+                Evaluasi komprehensif mencakup seluruh materi <strong class="text-white">Bab 1 (Sejarah dan Perumusan Pancasila)</strong> dan <strong class="text-white">Bab 2 (Norma, Hak, dan Konstitusi)</strong> — Pertemuan 1 sampai 6.
+            </p>
+            
+            <!-- Info Ujian -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 max-w-4xl mx-auto mb-6">
+                <div class="glass-panel p-3 rounded-lg text-center">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider">Materi</p>
+                    <p class="text-sm font-semibold text-luxury-gold">Bab 1 – Bab 2</p>
+                </div>
+                <div class="glass-panel p-3 rounded-lg text-center">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider">Total Soal</p>
+                    <p class="text-sm font-semibold text-luxury-gold">50 Soal</p>
+                </div>
+                <div class="glass-panel p-3 rounded-lg text-center">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider">Skor Maksimal</p>
+                    <p class="text-sm font-semibold text-luxury-gold">100</p>
+                </div>
+                <div class="glass-panel p-3 rounded-lg text-center">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider">Waktu</p>
+                    <p class="text-sm font-semibold text-luxury-gold">120 Menit</p>
+                </div>
+                <div class="glass-panel p-3 rounded-lg text-center">
+                    <p class="text-xs text-gray-500 uppercase tracking-wider">Tipe Soal</p>
+                    <p class="text-sm font-semibold text-luxury-gold">5 Tipe</p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Dewi Sartika, S.Pd</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <span>MTsN 10 Agam</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ringkasan Materi -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> Cakupan Materi UTS
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="glass-panel p-5 rounded-xl border-l-4 border-luxury-gold">
+                    <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-luxury-gold/20 text-luxury-gold flex items-center justify-center text-sm font-bold">1</span>
+                        Bab 1: Sejarah & Perumusan Pancasila
+                    </h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Pertemuan 1: Latar Belakang Nilai-Nilai Pancasila</li>
+                        <li>• Pertemuan 2: Proses Kelahiran Pancasila</li>
+                        <li>• Pertemuan 3: Perumusan oleh Panitia Sembilan</li>
+                        <li>• Pertemuan 4: Penetapan Pancasila oleh PPKI</li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-l-4 border-luxury-gold">
+                    <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+                        <span class="w-8 h-8 rounded-full bg-luxury-gold/20 text-luxury-gold flex items-center justify-center text-sm font-bold">2</span>
+                        Bab 2: Norma, Hak, & Konstitusi
+                    </h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>• Pertemuan 5: Norma dalam Kehidupan Bermasyarakat</li>
+                        <li>• Pertemuan 6: Hak dan Kewajiban Warga Negara</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- UTS SECTION -->
+        <section id="uts-section" class="mt-8">
+            <div class="glass-panel p-6 md:p-8 rounded-2xl border border-luxury-gold/20">
+                
+                <!-- Identitas -->
+                <div class="mb-8 pb-6 border-b border-gray-700">
+                    <h3 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+                        Identitas Siswa
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Nama Lengkap *</label>
+                            <input type="text" id="namaSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">No. Absen / NIS *</label>
+                            <input type="text" id="nisSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none" placeholder="Contoh: 12345">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Kelas *</label>
+                            <select id="kelasSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none">
+                                <option value="">Pilih Kelas</option>
+                                <option value="VII-A">VII-A</option>
+                                <option value="VII-B">VII-B</option>
+                                <option value="VII-C">VII-C</option>
+                                <option value="VII-D">VII-D</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Tanggal Ujian</label>
+                            <input type="date" id="tanggalUjian" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ BAGIAN A: PILIHAN GANDA (20 SOAL) ============ -->
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                        <h3 class="text-luxury-gold font-semibold flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-luxury-gold text-luxury-900 flex items-center justify-center text-sm font-bold">A</span>
+                            Pilihan Ganda (20 Soal × 2 Poin = 40 Poin)
+                        </h3>
+                        <span class="text-xs text-gray-500">Pilih satu jawaban yang paling tepat</span>
+                    </div>
+
+                    <div class="space-y-5" id="pg-container">
+                        <!-- SOAL 1 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">1. Kerajaan di Nusantara yang melahirkan semboyan "Bhinneka Tunggal Ika" dalam kitab Sutasoma karya Mpu Tantular adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg1" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Sriwijaya</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg1" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Kutai</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg1" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Majapahit</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg1" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Tarumanegara</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 2 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">2. Organisasi pergerakan nasional pertama yang menandai kebangkitan nasional Indonesia adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg2" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Sarekat Islam</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg2" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Budi Utomo</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg2" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Indische Partij</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg2" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Muhammadiyah</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 3 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">3. Ketua BPUPK yang memimpin jalannya persidangan perumusan dasar negara adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg3" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Ir. Soekarno</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg3" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Dr. K.R.T. Radjiman Wedyodiningrat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg3" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Drs. Mohammad Hatta</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg3" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mr. Soepomo</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 4 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">4. Istilah "Pancasila" untuk pertama kalinya dikemukakan oleh Ir. Soekarno dalam pidatonya pada tanggal...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg4" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 29 Mei 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg4" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 31 Mei 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg4" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 1 Juni 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg4" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 17 Agustus 1945</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 5 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">5. Panitia Sembilan berhasil merumuskan Piagam Jakarta pada tanggal...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg5" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 1 Juni 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg5" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 22 Juni 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg5" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 17 Agustus 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg5" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 18 Agustus 1945</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 6 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">6. PPKI mengesahkan UUD 1945 dan menetapkan Pancasila sebagai dasar negara pada tanggal...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg6" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 16 Agustus 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg6" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 17 Agustus 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg6" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 18 Agustus 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg6" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 19 Agustus 1945</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 7 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">7. Norma yang bersumber dari hati nurani manusia dan bersifat universal disebut norma...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg7" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Agama</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg7" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Kesusilaan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg7" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Kesopanan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg7" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Hukum</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 8 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">8. Berikut yang merupakan contoh perilaku sesuai norma kesopanan di sekolah adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg8" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mengerjakan PR dengan jujur</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg8" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Berbicara sopan kepada guru dan teman</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg8" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Melaksanakan shalat berjamaah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg8" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mematuhi peraturan lalu lintas</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 9 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">9. Hak warga negara untuk mendapatkan pendidikan dijamin dalam UUD NRI 1945 pasal...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg9" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Pasal 27</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg9" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Pasal 28</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg9" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Pasal 29</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg9" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Pasal 31</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 10 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">10. Salah satu kewajiban warga negara Indonesia yang diatur dalam UUD 1945 adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg10" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mendapat perlindungan hukum</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg10" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Memeluk agama dan beribadah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg10" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Membela negara dan menaati hukum</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg10" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mendapat pekerjaan yang layak</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 11 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">11. Sanksi bagi pelanggar norma hukum berbeda dengan norma lainnya karena bersifat...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg11" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Tidak tegas dan bersifat moral</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg11" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Tegas, memaksa, dan dapat dipaksakan oleh negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg11" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Hanya berupa teguran dari masyarakat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg11" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Dosa dan akan mendapat hukuman di akhirat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 12 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">12. Tujuan utama adanya norma dalam kehidupan bermasyarakat adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg12" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Menciptakan ketertiban, keadilan, dan kepastian</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg12" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Menguntungkan kelompok tertentu</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg12" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Membatasi kebebasan individu sepenuhnya</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg12" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Menambah beban masyarakat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 13 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">13. Sila pertama Piagam Jakarta pada 18 Agustus 1945 diubah menjadi "Ketuhanan Yang Maha Esa" oleh PPKI. Alasan utama perubahan tersebut adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg13" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Menjaga persatuan bangsa Indonesia yang majemuk (multi-agama)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg13" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Menolak semua nilai agama dalam negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg13" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Mengikuti keinginan pemerintah Jepang</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg13" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mengganti agama Islam dengan agama lain</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 14 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">14. Pasal 29 ayat (2) UUD NRI 1945 menjamin hak warga negara untuk...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg14" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Memeluk agama dan beribadah menurut agamanya</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg14" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Mendapat pendidikan dasar</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg14" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Berserikat dan berkumpul</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg14" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mengeluarkan pendapat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 15 (LOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">15. Salah satu tugas PPKI yang disahkan pada 18 Agustus 1945 adalah...</p>
+                                <span class="badge-lots whitespace-nowrap">LOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg15" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mengumumkan Proklamasi Kemerdekaan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg15" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Mengesahkan UUD 1945, memilih Presiden & Wakil Presiden, serta membentuk Komite Nasional</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg15" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Merumuskan dasar negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg15" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Menghadapi Sekutu dalam Perang Dunia II</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 16 (HOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">16. <strong>Analisis:</strong> Perlawanan rakyat Indonesia terhadap penjajah sebelum tahun 1908 sering mengalami kegagalan. Faktor utama penyebab kegagalan tersebut adalah...</p>
+                                <span class="badge-hots whitespace-nowrap">HOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg16" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Senjata rakyat lebih modern daripada penjajah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg16" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Perlawanan bersifat kedaerahan, tidak terkoordinasi, dan bergantung pada pemimpin kharismatik</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg16" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Rakyat tidak memiliki semangat juang</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg16" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Penjajah memberikan kebebasan beragama</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 17 (HOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">17. <strong>Evaluasi:</strong> Perubahan sila pertama Piagam Jakarta menjadi "Ketuhanan Yang Maha Esa" oleh para tokoh Islam menunjukkan sikap...</p>
+                                <span class="badge-hots whitespace-nowrap">HOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg17" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Kelemahan dan kekalahan golongan Islam</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg17" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Jiwa besar, toleransi, dan semangat persatuan di atas kepentingan golongan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg17" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Penolakan terhadap nilai-nilai agama</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg17" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Paksaan dari pemerintah kolonial Jepang</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 18 (HOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">18. <strong>Analisis Kasus:</strong> Seorang siswa menyontek saat ujian dan berbohong kepada gurunya. Norma yang paling langsung dilanggar oleh siswa tersebut adalah...</p>
+                                <span class="badge-hots whitespace-nowrap">HOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg18" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Norma hukum saja</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg18" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Norma kesusilaan (kejujuran) dan norma kesopanan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg18" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Norma agama saja</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg18" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Norma adat istiadat</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 19 (HOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">19. <strong>Evaluasi Kasus:</strong> Andi selalu menuntut haknya untuk mendapat fasilitas sekolah yang baik, tetapi ia sering tidak melaksanakan piket kelas dan melanggar tata tertib. Berdasarkan kasus tersebut, sikap Andi mencerminkan...</p>
+                                <span class="badge-hots whitespace-nowrap">HOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg19" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Warga negara yang ideal dan bertanggung jawab</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg19" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Ketidakseimbangan antara pelaksanaan hak dan kewajiban</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg19" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Sikap demokratis yang patut ditiru</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg19" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Bentuk perlawanan terhadap sekolah</span></label>
+                            </div>
+                        </div>
+
+                        <!-- SOAL 20 (HOTS) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <p class="text-white font-medium">20. <strong>Analisis:</strong> Di era digital, banyak siswa yang dengan bebas menyampaikan pendapat di media sosial. Tindakan yang paling mencerminkan implementasi Sila ke-4 Pancasila dalam konteks digital adalah...</p>
+                                <span class="badge-hots whitespace-nowrap">HOTS</span>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg20" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Menyebarkan hoaks untuk menjatuhkan lawan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg20" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Menyampaikan pendapat secara santun, berbasis data, dan menghargai perbedaan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg20" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Memaksa orang lain untuk setuju dengan pendapat kita</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="pg20" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Tidak peduli dengan isu-isu kebangsaan</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ BAGIAN B: PILIHAN GANDA KOMPLEKS (10 SOAL) ============ -->
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                        <h3 class="text-luxury-gold font-semibold flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-luxury-gold text-luxury-900 flex items-center justify-center text-sm font-bold">B</span>
+                            Pilihan Ganda Kompleks (10 Soal × 1 Poin = 10 Poin)
+                        </h3>
+                        <span class="text-xs text-gray-500">Pilih <strong>SEMUA</strong> jawaban yang benar</span>
+                    </div>
+
+                    <div class="space-y-5" id="pgk-container">
+                        <!-- PGK 21 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">21. Nilai-nilai Pancasila yang telah tercermin pada masa kerajaan Nusantara adalah... <em>(pilih lebih dari satu)</em></p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk21" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Toleransi antarumat beragama</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk21" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Gotong royong dan kedermawanan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk21" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Individualisme dan persaingan bebas</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk21" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Persatuan dalam keberagaman (Bhinneka Tunggal Ika)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 22 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">22. Faktor internal yang mendorong terjadinya Kebangkitan Nasional pada tahun 1908 adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk22" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Penderitaan rakyat akibat penjajahan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk22" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Munculnya golongan terpelajar akibat Politik Etis</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk22" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Kemenangan Jepang atas Rusia tahun 1905</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk22" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Kenangan kejayaan masa lalu (Sriwijaya & Majapahit)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 23 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">23. Tokoh yang termasuk anggota Panitia Sembilan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk23" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Ir. Soekarno</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk23" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Drs. Mohammad Hatta</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk23" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Mr. Soepomo</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk23" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. H. Agus Salim</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 24 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">24. Hasil keputusan sidang PPKI pada tanggal 18 Agustus 1945 meliputi...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk24" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mengesahkan UUD 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk24" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Memilih Ir. Soekarno sebagai Presiden dan Drs. Mohammad Hatta sebagai Wakil Presiden</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk24" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Membentuk Komite Nasional untuk membantu Presiden sementara waktu</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk24" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Membubarkan BPUPK dan membentuk kabinet</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 25 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">25. Macam-macam norma yang berlaku dalam kehidupan bermasyarakat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk25" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Norma Agama</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk25" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Norma Kesusilaan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk25" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Norma Kesopanan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk25" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Norma Hukum</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 26 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">26. Sanksi bagi pelanggar norma berikut yang tepat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk26" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Norma Agama → Dosa, hukuman di akhirat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk26" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Norma Kesusilaan → Penyesalan dari hati nurani</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk26" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Norma Kesopanan → Dikucilkan masyarakat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk26" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Norma Hukum → Denda atau penjara</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 27 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">27. Yang termasuk hak warga negara Indonesia menurut UUD NRI 1945 adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk27" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Hak atas pekerjaan dan penghidupan yang layak</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk27" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Hak memeluk agama dan beribadah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk27" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Hak mendapat pendidikan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk27" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Hak untuk tidak membayar pajak</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 28 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">28. Yang termasuk kewajiban warga negara Indonesia adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk28" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Menaati hukum dan pemerintahan</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk28" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Membela negara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk28" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Menghormati hak asasi manusia orang lain</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk28" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mendapat jaminan sosial dari negara</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 29 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">29. Tokoh yang menyampaikan usulan dasar negara dalam sidang BPUPK adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk29" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mr. Mohammad Yamin</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk29" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Prof. Dr. Mr. Soepomo</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk29" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Ir. Soekarno</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk29" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Dr. Sutomo</span></label>
+                            </div>
+                        </div>
+
+                        <!-- PGK 30 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">30. Tujuan negara Indonesia sebagaimana tercantum dalam Alinea IV Pembukaan UUD 1945 adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk30" value="A" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Melindungi segenap bangsa Indonesia dan seluruh tumpah darah Indonesia</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk30" value="B" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Memajukan kesejahteraan umum</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk30" value="C" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Mencerdaskan kehidupan bangsa</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="checkbox" name="pgk30" value="D" class="custom-checkbox hidden"><div class="w-5 h-5 rounded border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="check-dot w-2.5 h-2.5 rounded-sm bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Ikut melaksanakan ketertiban dunia</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ BAGIAN C: BENAR/SALAH (10 SOAL) ============ -->
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                        <h3 class="text-luxury-gold font-semibold flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-luxury-gold text-luxury-900 flex items-center justify-center text-sm font-bold">C</span>
+                            Benar / Salah (10 Soal × 2 Poin = 20 Poin)
+                        </h3>
+                        <span class="text-xs text-gray-500">Tentukan pernyataan berikut Benar atau Salah</span>
+                    </div>
+
+                    <div class="space-y-4" id="bs-container">
+                        <!-- BS 31 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">31. Budi Utomo didirikan pada tanggal 20 Mei 1908 oleh dr. Soetomo dan mahasiswa STOVIA.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs31" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs31" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 32 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">32. BPUPK dibentuk pada tanggal 1 Juni 1945 untuk merumuskan dasar negara.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs32" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs32" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 33 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">33. Norma agama bersumber dari wahyu Tuhan Yang Maha Esa dan berisi ajaran hidup bagi umat beragama.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs33" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs33" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 34 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">34. Pasal 27 ayat (3) UUD NRI 1945 mengatur tentang kewajiban setiap warga negara untuk membela negara.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs34" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs34" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 35 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">35. Piagam Jakarta adalah nama lain dari UUD 1945 yang disahkan pada 18 Agustus 1945.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs35" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs35" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 36 (BARU) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">36. Ir. Soekarno menyampaikan pidato tentang dasar negara pada sidang BPUPK tanggal 31 Mei 1945.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs36" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs36" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 37 (BARU) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">37. Pada masa kerajaan Majapahit, toleransi antarumat beragama tercermin dalam semboyan "Bhinneka Tunggal Ika".</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs37" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs37" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 38 (BARU) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">38. Pasal 31 ayat (1) UUD NRI 1945 menjamin hak warga negara untuk memeluk agama dan beribadah.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs38" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs38" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 39 (BARU) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">39. Norma hukum memiliki sanksi yang paling tegas karena dapat dipaksakan oleh alat negara.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs39" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs39" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BS 40 (BARU) -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                                <p class="text-white font-medium flex-1">40. Hak dan kewajiban warga negara memiliki hubungan kausalitas (sebab-akibat) yang tidak dapat dipisahkan.</p>
+                                <div class="flex gap-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs40" value="B" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Benar</div></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="bs40" value="S" class="custom-radio hidden"><div class="px-4 py-2 rounded border-2 border-gray-600 text-sm transition-all hover:border-luxury-gold">Salah</div></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ BAGIAN D: MENJODOHKAN (5 SOAL) ============ -->
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                        <h3 class="text-luxury-gold font-semibold flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-luxury-gold text-luxury-900 flex items-center justify-center text-sm font-bold">D</span>
+                            Menjodohkan (5 Kelompok × 2 Poin = 10 Poin)
+                        </h3>
+                        <span class="text-xs text-gray-500">Pasangkan pernyataan kiri dengan jawaban yang tepat</span>
+                    </div>
+
+                    <div class="space-y-4" id="match-container">
+                        <!-- Match 41: Tokoh & Peran -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">41. Pasangkan tokoh dengan peran/jabatannya:</p>
+                            <div class="space-y-3">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Ir. Soekarno</span>
+                                    <select data-match="m41a" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Ketua BPUPK</option>
+                                        <option value="2">Ketua Panitia Sembilan / Presiden RI Pertama</option>
+                                        <option value="3">Pengusul dasar negara (29 Mei 1945)</option>
+                                        <option value="4">Pengusul dasar negara (31 Mei 1945)</option>
+                                        <option value="5">Wakil Ketua Panitia Sembilan / Wakil Presiden</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Dr. K.R.T. Radjiman Wedyodiningrat</span>
+                                    <select data-match="m41b" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Ketua BPUPK</option>
+                                        <option value="2">Ketua Panitia Sembilan / Presiden RI Pertama</option>
+                                        <option value="3">Pengusul dasar negara (29 Mei 1945)</option>
+                                        <option value="4">Pengusul dasar negara (31 Mei 1945)</option>
+                                        <option value="5">Wakil Ketua Panitia Sembilan / Wakil Presiden</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Mr. Mohammad Yamin</span>
+                                    <select data-match="m41c" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Ketua BPUPK</option>
+                                        <option value="2">Ketua Panitia Sembilan / Presiden RI Pertama</option>
+                                        <option value="3">Pengusul dasar negara (29 Mei 1945)</option>
+                                        <option value="4">Pengusul dasar negara (31 Mei 1945)</option>
+                                        <option value="5">Wakil Ketua Panitia Sembilan / Wakil Presiden</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Prof. Dr. Mr. Soepomo</span>
+                                    <select data-match="m41d" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Ketua BPUPK</option>
+                                        <option value="2">Ketua Panitia Sembilan / Presiden RI Pertama</option>
+                                        <option value="3">Pengusul dasar negara (29 Mei 1945)</option>
+                                        <option value="4">Pengusul dasar negara (31 Mei 1945)</option>
+                                        <option value="5">Wakil Ketua Panitia Sembilan / Wakil Presiden</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Drs. Mohammad Hatta</span>
+                                    <select data-match="m41e" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Ketua BPUPK</option>
+                                        <option value="2">Ketua Panitia Sembilan / Presiden RI Pertama</option>
+                                        <option value="3">Pengusul dasar negara (29 Mei 1945)</option>
+                                        <option value="4">Pengusul dasar negara (31 Mei 1945)</option>
+                                        <option value="5">Wakil Ketua Panitia Sembilan / Wakil Presiden</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Match 42: Norma & Sumber -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">42. Pasangkan norma dengan sumbernya:</p>
+                            <div class="space-y-3">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Norma Agama</span>
+                                    <select data-match="m42a" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Wahyu Tuhan (Kitab Suci)</option>
+                                        <option value="2">Hati nurani manusia</option>
+                                        <option value="3">Pergaulan masyarakat</option>
+                                        <option value="4">Negara/lembaga berwenang</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Norma Kesusilaan</span>
+                                    <select data-match="m42b" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Wahyu Tuhan (Kitab Suci)</option>
+                                        <option value="2">Hati nurani manusia</option>
+                                        <option value="3">Pergaulan masyarakat</option>
+                                        <option value="4">Negara/lembaga berwenang</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Norma Kesopanan</span>
+                                    <select data-match="m42c" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Wahyu Tuhan (Kitab Suci)</option>
+                                        <option value="2">Hati nurani manusia</option>
+                                        <option value="3">Pergaulan masyarakat</option>
+                                        <option value="4">Negara/lembaga berwenang</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Norma Hukum</span>
+                                    <select data-match="m42d" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Wahyu Tuhan (Kitab Suci)</option>
+                                        <option value="2">Hati nurani manusia</option>
+                                        <option value="3">Pergaulan masyarakat</option>
+                                        <option value="4">Negara/lembaga berwenang</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Match 43: Pasal & Isi -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">43. Pasangkan pasal UUD NRI 1945 dengan isinya:</p>
+                            <div class="space-y-3">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Pasal 27 ayat (2)</span>
+                                    <select data-match="m43a" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Hak atas pekerjaan dan penghidupan yang layak</option>
+                                        <option value="2">Kemerdekaan berserikat dan berkumpul</option>
+                                        <option value="3">Hak memeluk agama dan beribadah</option>
+                                        <option value="4">Hak mendapat pendidikan</option>
+                                        <option value="5">Kewajiban membela negara</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Pasal 28</span>
+                                    <select data-match="m43b" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Hak atas pekerjaan dan penghidupan yang layak</option>
+                                        <option value="2">Kemerdekaan berserikat dan berkumpul</option>
+                                        <option value="3">Hak memeluk agama dan beribadah</option>
+                                        <option value="4">Hak mendapat pendidikan</option>
+                                        <option value="5">Kewajiban membela negara</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Pasal 29 ayat (2)</span>
+                                    <select data-match="m43c" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Hak atas pekerjaan dan penghidupan yang layak</option>
+                                        <option value="2">Kemerdekaan berserikat dan berkumpul</option>
+                                        <option value="3">Hak memeluk agama dan beribadah</option>
+                                        <option value="4">Hak mendapat pendidikan</option>
+                                        <option value="5">Kewajiban membela negara</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Pasal 31 ayat (1)</span>
+                                    <select data-match="m43d" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Hak atas pekerjaan dan penghidupan yang layak</option>
+                                        <option value="2">Kemerdekaan berserikat dan berkumpul</option>
+                                        <option value="3">Hak memeluk agama dan beribadah</option>
+                                        <option value="4">Hak mendapat pendidikan</option>
+                                        <option value="5">Kewajiban membela negara</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Pasal 30 ayat (1)</span>
+                                    <select data-match="m43e" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Hak atas pekerjaan dan penghidupan yang layak</option>
+                                        <option value="2">Kemerdekaan berserikat dan berkumpul</option>
+                                        <option value="3">Hak memeluk agama dan beribadah</option>
+                                        <option value="4">Hak mendapat pendidikan</option>
+                                        <option value="5">Hak dan kewajiban membela negara</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Match 44: Tanggal & Peristiwa -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">44. Pasangkan tanggal dengan peristiwa bersejarah:</p>
+                            <div class="space-y-3">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• 1 Juni 1945</span>
+                                    <select data-match="m44a" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Pidato Soekarno - Lahirnya Pancasila</option>
+                                        <option value="2">Perumusan Piagam Jakarta</option>
+                                        <option value="3">Proklamasi Kemerdekaan Indonesia</option>
+                                        <option value="4">Pengesahan UUD 1945 oleh PPKI</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• 22 Juni 1945</span>
+                                    <select data-match="m44b" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Pidato Soekarno - Lahirnya Pancasila</option>
+                                        <option value="2">Perumusan Piagam Jakarta oleh Panitia Sembilan</option>
+                                        <option value="3">Proklamasi Kemerdekaan Indonesia</option>
+                                        <option value="4">Pengesahan UUD 1945 oleh PPKI</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• 17 Agustus 1945</span>
+                                    <select data-match="m44c" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Pidato Soekarno - Lahirnya Pancasila</option>
+                                        <option value="2">Perumusan Piagam Jakarta oleh Panitia Sembilan</option>
+                                        <option value="3">Proklamasi Kemerdekaan Indonesia</option>
+                                        <option value="4">Pengesahan UUD 1945 oleh PPKI</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• 18 Agustus 1945</span>
+                                    <select data-match="m44d" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">Pidato Soekarno - Lahirnya Pancasila</option>
+                                        <option value="2">Perumusan Piagam Jakarta oleh Panitia Sembilan</option>
+                                        <option value="3">Proklamasi Kemerdekaan Indonesia</option>
+                                        <option value="4">Pengesahan UUD 1945 oleh PPKI</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Match 45: Organisasi & Tahun -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">45. Pasangkan organisasi pergerakan dengan tahun berdirinya:</p>
+                            <div class="space-y-3">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Budi Utomo</span>
+                                    <select data-match="m45a" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">1908</option>
+                                        <option value="2">1911</option>
+                                        <option value="3">1912</option>
+                                        <option value="4">1925</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Sarekat Dagang Islam</span>
+                                    <select data-match="m45b" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">1908</option>
+                                        <option value="2">1911</option>
+                                        <option value="3">1912</option>
+                                        <option value="4">1925</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Indische Partij</span>
+                                    <select data-match="m45c" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">1908</option>
+                                        <option value="2">1911</option>
+                                        <option value="3">1912</option>
+                                        <option value="4">1925</option>
+                                    </select>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
+                                    <span class="text-gray-300 text-sm">• Perhimpunan Indonesia</span>
+                                    <select data-match="m45d" class="bg-luxury-800 border border-gray-700 rounded px-3 py-2 text-sm text-white focus:border-luxury-gold focus:outline-none">
+                                        <option value="">-- Pilih --</option>
+                                        <option value="1">1908</option>
+                                        <option value="2">1911</option>
+                                        <option value="3">1912</option>
+                                        <option value="4">1925 (sebagai PI)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ BAGIAN E: ESSAY (5 SOAL) ============ -->
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                        <h3 class="text-luxury-gold font-semibold flex items-center gap-2">
+                            <span class="w-8 h-8 rounded-full bg-luxury-gold text-luxury-900 flex items-center justify-center text-sm font-bold">E</span>
+                            Essay (5 Soal × 4 Poin = 20 Poin)
+                        </h3>
+                        <span class="text-xs text-gray-500">Jawab dengan jelas dan lengkap</span>
+                    </div>
+
+                    <div class="space-y-5" id="essay-container">
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">46. Jelaskan latar belakang terbentuknya BPUPK dan sebutkan tiga tokoh yang menyampaikan usulan dasar negara dalam sidang pertama BPUPK beserta tanggal pidatonya! (4 Poin)</p>
+                            <textarea id="essay46" rows="4" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">47. Tuliskan rumusan sila-sila dalam Piagam Jakarta (22 Juni 1945) dan jelaskan mengapa sila pertamanya diubah oleh PPKI pada 18 Agustus 1945! (4 Poin)</p>
+                            <textarea id="essay47" rows="4" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">48. Sebutkan dan jelaskan 4 (empat) macam norma yang berlaku dalam masyarakat beserta sumber dan sanksinya masing-masing! (4 Poin)</p>
+                            <textarea id="essay48" rows="4" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">49. Sebutkan 5 (lima) hak warga negara Indonesia yang dijamin dalam UUD NRI 1945 beserta pasal yang mengaturnya! (4 Poin)</p>
+                            <textarea id="essay49" rows="4" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">50. Jelaskan mengapa keseimbangan antara hak dan kewajiban sangat penting dalam kehidupan berbangsa dan bernegara! Berikan 2 (dua) contoh penerapannya dalam kehidupan sehari-hari! (4 Poin)</p>
+                            <textarea id="essay50" rows="4" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div id="hasil-container" class="hidden mb-8 p-6 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl">
+                    <h3 class="text-luxury-gold font-serif text-xl font-bold mb-4 text-center">📊 Hasil Ujian Tengah Semester</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-center mb-4">
+                        <div class="bg-luxury-900 p-3 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">PG (40)</p>
+                            <p class="text-xl font-bold text-white"><span id="skor-pg">0</span></p>
+                        </div>
+                        <div class="bg-luxury-900 p-3 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">PGK (10)</p>
+                            <p class="text-xl font-bold text-white"><span id="skor-pgk">0</span></p>
+                        </div>
+                        <div class="bg-luxury-900 p-3 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">B/S (20)</p>
+                            <p class="text-xl font-bold text-white"><span id="skor-bs">0</span></p>
+                        </div>
+                        <div class="bg-luxury-900 p-3 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Jodoh (10)</p>
+                            <p class="text-xl font-bold text-white"><span id="skor-match">0</span></p>
+                        </div>
+                        <div class="bg-luxury-900 p-3 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Essay</p>
+                            <p class="text-xl font-bold text-luxury-goldLight text-sm">Menunggu Guru</p>
+                        </div>
+                    </div>
+                    <div class="bg-luxury-900 p-5 rounded-lg border-2 border-luxury-gold text-center">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-2">Skor Akhir UTS (Otomatis)</p>
+                        <p class="text-5xl font-bold gold-gradient-text"><span id="skor-total">0</span><span class="text-2xl text-gray-500"> / 80</span></p>
+                        <p class="text-sm text-gray-400 mt-2" id="predikat"></p>
+                        <p class="text-xs text-gray-500 mt-1 italic">*Skor Essay (20 poin) akan ditambahkan oleh guru</p>
+                    </div>
+                </div>
+
+                <!-- Tombol Aksi -->
+                <div class="flex flex-col md:flex-row gap-3 no-print">
+                    <button onclick="hitungNilaiUTS()" class="flex-1 bg-luxury-gold hover:bg-luxury-goldDark text-luxury-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        KIRIM & LIHAT HASIL
+                    </button>
+                    <button onclick="unduhPDF()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH PDF
+                    </button>
+                    <button onclick="unduhTXT()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH TXT
+                    </button>
+                    <button onclick="kirimEmail()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        EMAIL GURU
+                    </button>
+                    <button onclick="resetForm()" class="md:w-auto w-full bg-red-900/30 hover:bg-red-900/50 border border-red-500/30 text-red-400 font-semibold py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        ULANG
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-800 border-t border-luxury-gold/10 pt-12 pb-8 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 mb-8 flex-wrap">
+                <a href="6.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Pertemuan 6
+                </a>
+                <a href="index.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Daftar Isi
+                </a>
+                <a href="8.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    Pertemuan 8
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm mb-2">© 2026 Dewi Sartika, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+                <a href="mailto:mydheby@gmail.com" class="text-luxury-gold hover:text-white transition-colors text-sm">mydheby@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.getElementById('tanggalUjian').valueAsDate = new Date();
+
+        // Kunci Jawaban PG
+        const kunciPG = {
+            pg1: 'C', pg2: 'B', pg3: 'B', pg4: 'C', pg5: 'B',
+            pg6: 'C', pg7: 'B', pg8: 'B', pg9: 'D', pg10: 'C',
+            pg11: 'B', pg12: 'A', pg13: 'A', pg14: 'A', pg15: 'B',
+            pg16: 'B', pg17: 'B', pg18: 'B', pg19: 'B', pg20: 'B'
+        };
+
+        // Kunci Jawaban PG Kompleks
+        const kunciPGK = {
+            pgk21: ['A', 'B', 'D'],
+            pgk22: ['A', 'B', 'D'],
+            pgk23: ['A', 'B', 'D'],
+            pgk24: ['A', 'B', 'C'],
+            pgk25: ['A', 'B', 'C', 'D'],
+            pgk26: ['A', 'B', 'C', 'D'],
+            pgk27: ['A', 'B', 'C'],
+            pgk28: ['A', 'B', 'C'],
+            pgk29: ['A', 'B', 'C'],
+            pgk30: ['A', 'B', 'C', 'D']
+        };
+
+        // Kunci Jawaban B/S
+        const kunciBS = {
+            bs31: 'B',  // Budi Utomo 20 Mei 1908 → BENAR
+            bs32: 'S',  // BPUPK 1 Juni → SALAH (29 April 1945)
+            bs33: 'B',  // Norma agama dari wahyu → BENAR
+            bs34: 'B',  // Pasal 27(3) membela negara → BENAR
+            bs35: 'S',  // Piagam Jakarta = UUD 1945 → SALAH
+            bs36: 'S',  // Soekarno pidato 31 Mei → SALAH (1 Juni 1945)
+            bs37: 'B',  // Bhinneka Tunggal Ika Majapahit → BENAR
+            bs38: 'S',  // Pasal 31(1) memeluk agama → SALAH (Pasal 29(2))
+            bs39: 'B',  // Norma hukum sanksi tegas → BENAR
+            bs40: 'B'   // Hak & kewajiban kausalitas → BENAR
+        };
+
+        // Kunci Jawaban Menjodohkan
+        const kunciMatch = {
+            m41a: '2', m41b: '1', m41c: '3', m41d: '4', m41e: '5',
+            m42a: '1', m42b: '2', m42c: '3', m42d: '4',
+            m43a: '1', m43b: '2', m43c: '3', m43d: '4', m43e: '5',
+            m44a: '1', m44b: '2', m44c: '3', m44d: '4',
+            m45a: '1', m45b: '2', m45c: '3', m45d: '4'
+        };
+
+        let hasilSkor = { pg: 0, pgk: 0, bs: 0, match: 0 };
+
+        function hitungNilaiUTS() {
+            const nama = document.getElementById('namaSiswa').value;
+            const nis = document.getElementById('nisSiswa').value;
+            const kelas = document.getElementById('kelasSiswa').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            // Hitung PG (20 soal × 2 poin = 40)
+            let benarPG = 0;
+            for (let i = 1; i <= 20; i++) {
+                const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+                if (selected && selected.value === kunciPG[`pg${i}`]) {
+                    benarPG++;
+                }
+            }
+            hasilSkor.pg = benarPG * 2;
+
+            // Hitung PGK (10 soal × 1 poin = 10)
+            let benarPGK = 0;
+            for (let i = 21; i <= 30; i++) {
+                const checkboxes = document.querySelectorAll(`input[name="pgk${i}"]:checked`);
+                const selected = Array.from(checkboxes).map(cb => cb.value).sort();
+                const kunci = [...kunciPGK[`pgk${i}`]].sort();
+                if (JSON.stringify(selected) === JSON.stringify(kunci)) {
+                    benarPGK++;
+                }
+            }
+            hasilSkor.pgk = benarPGK * 1;
+
+            // Hitung B/S (10 soal × 2 poin = 20)
+            let benarBS = 0;
+            for (let i = 31; i <= 40; i++) {
+                const selected = document.querySelector(`input[name="bs${i}"]:checked`);
+                if (selected && selected.value === kunciBS[`bs${i}`]) {
+                    benarBS++;
+                }
+            }
+            hasilSkor.bs = benarBS * 2;
+
+            // Hitung Menjodohkan (5 kelompok × 2 poin = 10)
+            const kelompokMatch = {
+                group1: ['m41a', 'm41b', 'm41c', 'm41d', 'm41e'],
+                group2: ['m42a', 'm42b', 'm42c', 'm42d'],
+                group3: ['m43a', 'm43b', 'm43c', 'm43d', 'm43e'],
+                group4: ['m44a', 'm44b', 'm44c', 'm44d'],
+                group5: ['m45a', 'm45b', 'm45c', 'm45d']
+            };
+            
+            let benarMatch = 0;
+            for (const group in kelompokMatch) {
+                let allCorrect = true;
+                for (const key of kelompokMatch[group]) {
+                    const select = document.querySelector(`select[data-match="${key}"]`);
+                    if (!select || select.value !== kunciMatch[key]) {
+                        allCorrect = false;
+                        break;
+                    }
+                }
+                if (allCorrect) benarMatch++;
+            }
+            hasilSkor.match = benarMatch * 2;
+
+            // Total Skor (otomatis 80, essay 20 dinilai guru)
+            const total = hasilSkor.pg + hasilSkor.pgk + hasilSkor.bs + hasilSkor.match;
+
+            // Tampilkan hasil
+            document.getElementById('skor-pg').textContent = hasilSkor.pg;
+            document.getElementById('skor-pgk').textContent = hasilSkor.pgk;
+            document.getElementById('skor-bs').textContent = hasilSkor.bs;
+            document.getElementById('skor-match').textContent = hasilSkor.match;
+            document.getElementById('skor-total').textContent = total;
+
+            // Predikat (berdasarkan skor otomatis 80)
+            let predikat = '';
+            const persentase = (total / 80) * 100;
+            if (persentase >= 90) predikat = '🏆 Sangat Memuaskan (A)';
+            else if (persentase >= 80) predikat = '🥇 Memuaskan (B)';
+            else if (persentase >= 70) predikat = '🥈 Baik (C)';
+            else if (persentase >= 60) predikat = '🥉 Cukup (D)';
+            else predikat = '📚 Perlu Perbaikan (E)';
+            document.getElementById('predikat').textContent = predikat;
+
+            document.getElementById('hasil-container').classList.remove('hidden');
+            document.getElementById('hasil-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`Terima kasih, ${nama}!\n\nSkor UTS Otomatis Anda: ${total}/80\nPredikat: ${predikat}\n\nCatatan: Essay (20 poin) akan dinilai oleh guru.`);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('content-to-print');
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            const opt = {
+                margin: 10,
+                filename: `UTS_Pendidikan_Pancasila_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            const buttons = document.querySelectorAll('.no-print');
+            buttons.forEach(b => b.style.display = 'none');
+            html2pdf().set(opt).from(element).save().then(() => {
+                buttons.forEach(b => b.style.display = '');
+            });
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('namaSiswa').value || 'Tidak diisi';
+            const nis = document.getElementById('nisSiswa').value || 'Tidak diisi';
+            const kelas = document.getElementById('kelasSiswa').value || 'Tidak diisi';
+            const tanggal = document.getElementById('tanggalUjian').value || new Date().toLocaleDateString('id-ID');
+            const total = hasilSkor.pg + hasilSkor.pgk + hasilSkor.bs + hasilSkor.match;
+
+            let isi = `====================================\n`;
+            isi += `  UJIAN TENGAH SEMESTER (UTS)\n`;
+            isi += `  PENDIDIKAN PANCASILA\n`;
+            isi += `  MTsN 10 AGAM\n`;
+            isi += `====================================\n\n`;
+            isi += `Nama      : ${nama}\n`;
+            isi += `NIS       : ${nis}\n`;
+            isi += `Kelas     : ${kelas}\n`;
+            isi += `Tanggal   : ${tanggal}\n\n`;
+            isi += `--- HASIL PENILAIAN ---\n`;
+            isi += `Pilihan Ganda       : ${hasilSkor.pg} / 40\n`;
+            isi += `PG Kompleks         : ${hasilSkor.pgk} / 10\n`;
+            isi += `Benar/Salah         : ${hasilSkor.bs} / 20\n`;
+            isi += `Menjodohkan         : ${hasilSkor.match} / 10\n`;
+            isi += `Essay               : Menunggu Penilaian Guru (Maks 20)\n`;
+            isi += `---------------------\n`;
+            isi += `TOTAL OTOMATIS      : ${total} / 80\n`;
+            isi += `TOTAL FINAL         : ${total} + Essay / 100\n`;
+            isi += `====================================\n`;
+            isi += `Dewi Sartika, S.Pd | mydheby@gmail.com`;
+
+            const blob = new Blob([isi], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `UTS_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            const kelas = document.getElementById('kelasSiswa').value || 'Kelas';
+            const total = hasilSkor.pg + hasilSkor.pgk + hasilSkor.bs + hasilSkor.match;
+            const subject = `Laporan UTS Pendidikan Pancasila - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Dewi Sartika, S.Pd,\n\nBerikut laporan UTS saya:\n\nNama: ${nama}\nKelas: ${kelas}\n\nRincian Skor:\n- Pilihan Ganda: ${hasilSkor.pg}/40\n- PG Kompleks: ${hasilSkor.pgk}/10\n- Benar/Salah: ${hasilSkor.bs}/20\n- Menjodohkan: ${hasilSkor.match}/10\n- TOTAL OTOMATIS: ${total}/80\n- Essay: Menunggu penilaian guru (20)\n\nTerima kasih.`;
+            window.location.href = `mailto:mydheby@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if (confirm('Apakah Anda yakin ingin mengosongkan semua jawaban?')) {
+                document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => el.checked = false);
+                document.querySelectorAll('select').forEach(s => s.value = '');
+                document.querySelectorAll('textarea').forEach(t => t.value = '');
+                document.getElementById('namaSiswa').value = '';
+                document.getElementById('nisSiswa').value = '';
+                document.getElementById('kelasSiswa').value = '';
+                document.getElementById('tanggalUjian').valueAsDate = new Date();
+                document.getElementById('hasil-container').classList.add('hidden');
+                hasilSkor = { pg: 0, pgk: 0, bs: 0, match: 0 };
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
