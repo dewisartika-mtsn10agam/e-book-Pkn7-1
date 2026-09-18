@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 12: Indonesia sebagai Negara Kesatuan | Pendidikan Pancasila</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0B0F19',
+                            800: '#151B2B',
+                            700: '#1E293B',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA8C2C',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-luxury { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .custom-radio:checked + div {
+            border-color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        .custom-radio:checked + div .radio-dot {
+            background-color: #D4AF37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .glass-panel { background: white !important; border: 1px solid #ccc !important; color: black !important; }
+            .text-gray-300, .text-gray-400 { color: #333 !important; }
+            .text-white { color: black !important; }
+            .gold-gradient-text { -webkit-text-fill-color: #AA8C2C !important; color: #AA8C2C !important; }
+        }
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #151B2B; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(212, 175, 55, 0.3);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #D4AF37;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-luxury-900 text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-luxury-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-luxury-gold/10 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="11.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span class="font-serif font-semibold">Pertemuan 11</span>
+                </a>
+                <a href="13.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <span class="font-serif font-semibold">Pertemuan 13</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="content-to-print">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-12 border-b border-luxury-gold/20 pb-8">
+            <span class="inline-block px-4 py-1 rounded-full bg-luxury-gold/10 text-luxury-gold text-xs font-bold uppercase tracking-widest mb-4 border border-luxury-gold/20">Bab 3: Negara Kesatuan dan Persatuan</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Pertemuan 12</h1>
+            <h2 class="font-serif text-2xl md:text-3xl gold-gradient-text mb-6">Indonesia sebagai Negara Kesatuan</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
+                Memahami konsep, bentuk, dan karakteristik Negara Kesatuan Republik Indonesia (NKRI) sebagai bentuk negara yang dipilih oleh para pendiri bangsa. Materi ini membahas perbedaan antara negara kesatuan dan negara serikat (federal), sejarah penetapan bentuk negara Indonesia, prinsip desentralisasi, serta pentingnya menjaga keutuhan NKRI di tengah keberagaman.
+            </p>
+            <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Dewi Sartika, S.Pd</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <span>MTsN 10 Agam</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section A: Pengertian Negara Kesatuan -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> A. Pengertian Negara Kesatuan
+            </h3>
+            
+            <!-- Teori Pendukung -->
+            <div class="glass-panel p-6 rounded-xl mb-6 border-l-4 border-luxury-gold">
+                <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Teori Pendukung: Bentuk Negara Menurut Para Ahli
+                </h4>
+                <div class="space-y-3 text-sm text-gray-400">
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Prof. R. Kranenburg:</strong> Negara kesatuan adalah negara yang tidak tersusun atas negara-negara lain, dan negara tersebut tidak merupakan gabungan negara-negara lain. Hanya ada satu negara yang berdaulat.</span></p>
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Prof. Miriam Budiardjo:</strong> Negara kesatuan adalah negara yang wewenang legislatif dan eksekutifnya terpusat di pemerintahan pusat. Pemerintah daerah hanya menjalankan kekuasaan yang didelegasikan oleh pusat.</span></p>
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Logemann:</strong> Negara kesatuan adalah suatu negara yang berkedaulatan tunggal, tidak terbagi-bagi, dan tidak ada negara lain di dalamnya.</span></p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                <strong class="text-white">Negara Kesatuan</strong> adalah bentuk negara di mana wewenang legislatif dan eksekutif tertinggi berada pada pemerintahan pusat. Dalam negara kesatuan, hanya ada <strong class="text-luxury-gold">satu kedaulatan</strong>, yaitu kedaulatan negara yang dipegang oleh pemerintah pusat. Pemerintah daerah hanya menjalankan kekuasaan yang diberikan oleh pemerintah pusat.
+            </p>
+
+            <div class="bg-luxury-900/50 p-5 rounded-lg border border-luxury-gold/20 mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Ciri-Ciri Negara Kesatuan
+                </h4>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-300">
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Hanya ada satu konstitusi dan satu kepala negara.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Kekuasaan tertinggi berada di tangan pemerintah pusat.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Pemerintah daerah bersifat otonom (diberi wewenang tertentu).</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Tidak ada negara di dalam negara.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Hukum yang berlaku seragam di seluruh wilayah negara.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">•</span> Pemerintah pusat dapat menarik kembali wewenang yang telah didelegasikan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section B: Perbedaan Negara Kesatuan vs Federal -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> B. Perbedaan Negara Kesatuan dan Negara Serikat (Federal)
+            </h3>
+            
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Di dunia terdapat dua bentuk negara utama: <strong class="text-white">Negara Kesatuan (Unitaris)</strong> dan <strong class="text-white">Negara Serikat (Federal)</strong>. Indonesia memilih bentuk negara kesatuan, berbeda dengan negara tetangga seperti Malaysia yang berbentuk federal.
+            </p>
+
+            <!-- Tabel Perbandingan -->
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Aspek</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Negara Kesatuan (Unitaris)</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Negara Serikat (Federal)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kedaulatan</td>
+                            <td class="p-4">Tunggal, hanya di pemerintah pusat</td>
+                            <td class="p-4">Terbagi antara pusat dan negara bagian</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Konstitusi</td>
+                            <td class="p-4">Satu konstitusi untuk seluruh negara</td>
+                            <td class="p-4">Konstitusi federal + konstitusi negara bagian</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kepala Negara</td>
+                            <td class="p-4">Satu kepala negara (Presiden/Raja)</td>
+                            <td class="p-4">Satu kepala negara federal; negara bagian punya gubernur</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kekuasaan Daerah</td>
+                            <td class="p-4">Otonomi (diberikan oleh pusat)</td>
+                            <td class="p-4">Kedaulatan asli (melekat pada negara bagian)</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Hukum</td>
+                            <td class="p-4">Seragam di seluruh wilayah</td>
+                            <td class="p-4">Negara bagian dapat membuat hukum sendiri</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Hubungan Pusat-Daerah</td>
+                            <td class="p-4">Pusat dapat menarik kembali wewenang</td>
+                            <td class="p-4">Pusat tidak dapat menarik wewenang negara bagian</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Contoh Negara</td>
+                            <td class="p-4"><strong class="text-luxury-goldLight">Indonesia</strong>, Prancis, Jepang, Filipina</td>
+                            <td class="p-4">Amerika Serikat, Malaysia, Jerman, Australia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                <p class="text-sm text-gray-400 italic flex items-start gap-2">
+                    <span class="text-luxury-gold text-lg">💡</span>
+                    <span><strong>Catatan Penting:</strong> Meskipun Indonesia berbentuk negara kesatuan, Indonesia menerapkan sistem <strong class="text-white">desentralisasi</strong> (penyerahan wewenang) yang luas kepada daerah melalui <strong class="text-luxury-goldLight">Otonomi Daerah</strong>. Hal ini membuat Indonesia sering disebut sebagai <em>"negara kesatuan yang bersifat desentralistis"</em>.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section C: Indonesia sebagai Negara Kesatuan -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> C. Indonesia sebagai Negara Kesatuan
+            </h3>
+
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold mb-6">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Bentuk negara Indonesia ditetapkan dalam <strong class="text-white">UUD NRI 1945 Pasal 1 Ayat (1)</strong> yang berbunyi:
+                </p>
+                <div class="text-center p-6 bg-luxury-900/50 rounded-lg border border-luxury-gold/20">
+                    <p class="font-serif text-xl text-luxury-goldLight italic mb-2">"Negara Indonesia ialah Negara Kesatuan, yang berbentuk Republik."</p>
+                    <p class="text-sm text-luxury-gold font-semibold">— UUD NRI 1945, Pasal 1 Ayat (1)</p>
+                </div>
+            </div>
+
+            <!-- Sejarah Bentuk Negara -->
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Sejarah Bentuk Negara Indonesia
+                </h4>
+                <div class="space-y-4">
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">18 Agustus 1945 — PPKI</p>
+                        <p class="text-sm text-gray-300">PPKI menetapkan Indonesia sebagai <strong class="text-white">Negara Kesatuan berbentuk Republik</strong>. UUD 1945 disahkan sebagai konstitusi.</p>
+                    </div>
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">27 Desember 1949 — RIS</p>
+                        <p class="text-sm text-gray-300">Akibat tekanan Belanda, Indonesia sempat menjadi <strong class="text-luxury-goldLight">Republik Indonesia Serikat (RIS)</strong> — bentuk federal. Namun hanya bertahan 7 bulan.</p>
+                    </div>
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">17 Agustus 1950 — Kembali ke NKRI</p>
+                        <p class="text-sm text-gray-300">Rakyat Indonesia menolak bentuk federal. RIS dibubarkan, Indonesia kembali menjadi <strong class="text-white">Negara Kesatuan Republik Indonesia (NKRI)</strong>.</p>
+                    </div>
+                    <div class="timeline-item pb-2">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">1999-2002 — Amandemen UUD</p>
+                        <p class="text-sm text-gray-300">Amandemen UUD 1945 memperkuat bentuk negara kesatuan dengan sistem <strong class="text-luxury-goldLight">otonomi daerah</strong> yang lebih luas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prinsip NKRI -->
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+                <span class="text-luxury-gold">◆</span> Prinsip-Prinsip Negara Kesatuan Indonesia
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🏛️ Kedaulatan Tunggal</h5>
+                    <p class="text-xs text-gray-400">Hanya ada satu kedaulatan negara yang dipegang oleh pemerintah pusat. Tidak ada negara di dalam negara.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">📜 Satu Konstitusi</h5>
+                    <p class="text-xs text-gray-400">Seluruh wilayah Indonesia tunduk pada satu konstitusi yang sama, yaitu UUD NRI 1945.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🤝 Bhinneka Tunggal Ika</h5>
+                    <p class="text-xs text-gray-400">Berbeda-beda tetapi tetap satu. Keberagaman suku, agama, dan budaya tetap dalam bingkai persatuan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Desentralisasi & Otonomi Daerah -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> D. Desentralisasi dan Otonomi Daerah
+            </h3>
+            
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold mb-6">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Untuk menjalankan pemerintahan secara efektif di wilayah yang luas, Indonesia menerapkan sistem <strong class="text-luxury-gold">desentralisasi</strong> — penyerahan wewenang pemerintahan oleh pemerintah pusat kepada pemerintah daerah.
+                </p>
+            </div>
+
+            <!-- Tabel Istilah -->
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Istilah</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Pengertian</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Desentralisasi</td>
+                            <td class="p-4">Penyerahan wewenang pemerintahan oleh pusat kepada daerah otonom untuk mengatur urusan rumah tangganya sendiri.</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Dekonsentrasi</td>
+                            <td class="p-4">Pelimpahan wewenang dari pemerintah pusat kepada gubernur sebagai wakil pemerintah pusat di daerah.</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Tugas Pembantuan</td>
+                            <td class="p-4">Penugasan dari pusat kepada daerah untuk melaksanakan tugas tertentu dengan pertanggungjawaban kepada pusat.</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Otonomi Daerah</td>
+                            <td class="p-4">Hak, wewenang, dan kewajiban daerah otonom untuk mengatur dan mengurus sendiri urusan pemerintahan sesuai kepentingan masyarakat setempat.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                <p class="text-sm text-gray-400 italic flex items-start gap-2">
+                    <span class="text-luxury-gold text-lg">💡</span>
+                    <span><strong>Dasar Hukum:</strong> Otonomi daerah di Indonesia diatur dalam <strong class="text-white">UU No. 23 Tahun 2014</strong> tentang Pemerintahan Daerah (sebagaimana telah beberapa kali diubah). Prinsip ini sejalan dengan Pasal 18 UUD NRI 1945 yang menjamin pembagian urusan pemerintahan antara pusat dan daerah.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section E: Tantangan Menjaga NKRI -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> E. Tantangan Menjaga Keutuhan NKRI
+            </h3>
+            <div class="glass-panel p-6 rounded-xl">
+                <p class="text-gray-300 mb-4">Sebagai negara kepulauan yang luas dan beragam, NKRI menghadapi berbagai tantangan dalam menjaga keutuhannya:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🌏 Keberagaman yang Kompleks</h5>
+                        <p class="text-xs text-gray-400">Lebih dari 1.300 suku bangsa, 700+ bahasa daerah, dan 6 agama resmi. Potensi konflik SARA harus dikelola dengan bijak.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">⚠️ Gerakan Separatis</h5>
+                        <p class="text-xs text-gray-400">Sejarah menunjukkan adanya gerakan pemisahan diri (seperti DI/TII, GAM, OPM) yang mengancam keutuhan NKRI.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🌐 Pengaruh Globalisasi</h5>
+                        <p class="text-xs text-gray-400">Masuknya ideologi asing (liberalisme, komunisme, radikalisme) yang dapat menggerus nilai-nilai Pancasila.</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                        <h5 class="text-luxury-gold font-semibold mb-2 text-sm">💻 Ancaman Siber & Hoaks</h5>
+                        <p class="text-xs text-gray-400">Penyebaran hoaks, ujaran kebencian, dan polarisasi di media sosial yang dapat memecah belah bangsa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section F: Peran Siswa -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> F. Peran Siswa dalam Menjaga NKRI
+            </h3>
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Sebagai generasi penerus bangsa, siswa memiliki peran penting dalam menjaga keutuhan NKRI:
+                </p>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Mempelajari Pancasila dan UUD 1945</strong> dengan sungguh-sungguh sebagai pedoman hidup berbangsa.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Menghargai keberagaman</strong> suku, agama, ras, dan budaya di Indonesia.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Tidak menyebarkan hoaks</strong> dan ujaran kebencian di media sosial.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Mengikuti upacara bendera</strong> dan kegiatan nasionalisme di sekolah.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Berprestasi di bidang akademik, olahraga, dan seni</strong> untuk mengharumkan nama bangsa.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Mencintai produk dalam negeri</strong> dan melestarikan budaya lokal.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Terms, Quote & References -->
+        <section class="mb-12">
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">◆ Kata Kunci Pertemuan Ini</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Negara Kesatuan</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">NKRI</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Republik</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Federal</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Desentralisasi</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Otonomi Daerah</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Pasal 1 Ayat 1</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Bhinneka Tunggal Ika</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">RIS</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Kedaulatan</span>
+                </div>
+            </div>
+            
+            <div class="text-center p-8 border-t border-b border-luxury-gold/20 bg-luxury-gold/5 rounded-xl mb-6">
+                <p class="font-serif text-xl text-luxury-goldLight italic mb-3">"Dan berpegangteguhlah kamu semuanya pada tali (agama) Allah, dan janganlah kamu bercerai berai..."</p>
+                <p class="text-sm text-luxury-gold font-semibold">— QS. Ali Imran [3]: 103</p>
+                <p class="text-xs text-gray-500 mt-2 italic">Ayat ini mengingatkan pentingnya persatuan dan kesatuan — fondasi utama NKRI.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-luxury-gold/10">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">📚 Daftar Referensi Pendukung</h4>
+                <ul class="text-sm text-gray-400 space-y-2 list-decimal list-inside">
+                    <li>Budiardjo, Miriam. (2008). <em>Dasar-Dasar Ilmu Politik</em>. Jakarta: Gramedia Pustaka Utama.</li>
+                    <li>Kaelan. (2013). <em>Pendidikan Pancasila</em>. Yogyakarta: Paradigma.</li>
+                    <li>Republik Indonesia. (1945). <em>Undang-Undang Dasar Negara Republik Indonesia Tahun 1945</em>.</li>
+                    <li>Republik Indonesia. (2014). <em>Undang-Undang No. 23 Tahun 2014 tentang Pemerintahan Daerah</em>.</li>
+                    <li>Latif, Yudi. (2011). <em>Negara Paripurna: Historisitas, Rasionalitas, dan Aktualitas Pancasila</em>. Jakarta: Gramedia Pustaka Utama.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- UJI FORMATIF SECTION -->
+        <section id="uji-formatif" class="mt-16 scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl font-bold text-white mb-2">📝 Uji Formatif Pertemuan 12</h2>
+                <p class="text-gray-400 text-sm">Evaluasi Pemahaman Indonesia sebagai Negara Kesatuan</p>
+                <div class="mt-4 inline-flex items-center gap-4 text-xs text-gray-500 bg-luxury-800 px-4 py-2 rounded-full border border-luxury-gold/10">
+                    <span>📋 Bagian A: Pilihan Ganda (10 soal, 10 poin/soal)</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>✍️ Bagian B: Essay (5 soal, 20 poin/soal)</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 md:p-8 rounded-2xl border border-luxury-gold/20">
+                <!-- Identitas -->
+                <div class="mb-8 pb-6 border-b border-gray-700">
+                    <h3 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+                        Identitas Siswa
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Nama Lengkap *</label>
+                            <input type="text" id="namaSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">No. Absen / NIS *</label>
+                            <input type="text" id="nisSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Contoh: 12345">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Kelas *</label>
+                            <select id="kelasSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                                <option value="">Pilih Kelas</option>
+                                <option value="VII-A">VII-A</option>
+                                <option value="VII-B">VII-B</option>
+                                <option value="VII-C">VII-C</option>
+                                <option value="VII-D">VII-D</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Tanggal</label>
+                            <input type="date" id="tanggalUjian" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">📋 Bagian A: Pilihan Ganda</h3>
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Bentuk negara Indonesia ditetapkan dalam UUD NRI 1945 pasal...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Pasal 1 ayat (1)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Pasal 2 ayat (1)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Pasal 18 ayat (1)</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Pasal 27 ayat (1)</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Negara kesatuan adalah negara yang...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Terdiri dari beberapa negara bagian yang berdaulat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Memiliki kedaulatan tunggal dan kekuasaan tertinggi di pemerintah pusat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Tidak memiliki pemerintah daerah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Dikepalai oleh seorang raja dengan kekuasaan mutlak</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Indonesia pernah menjadi negara serikat (RIS) pada periode...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 1945 – 1949</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 1949 – 1950</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 1950 – 1959</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 1966 – 1998</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Penyerahan wewenang dari pemerintah pusat kepada daerah otonom untuk mengatur urusan rumah tangganya sendiri disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Sentralisasi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Dekonsentrasi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Desentralisasi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Federalisasi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Berikut yang merupakan contoh negara federal (serikat) adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Indonesia</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Amerika Serikat</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Jepang</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Filipina</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">6. Semboyan "Bhinneka Tunggal Ika" memiliki makna...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Berbeda-beda tetapi tetap satu jua</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Satu untuk semua, semua untuk satu</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Bersatu kita teguh, bercerai kita runtuh</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Maju terus pantang mundur</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">7. Salah satu ciri negara kesatuan adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Memiliki beberapa konstitusi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Negara bagian memiliki kedaulatan sendiri</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Hanya memiliki satu kepala negara dan satu konstitusi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Pemerintah pusat tidak dapat mencampuri urusan daerah</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">8. Hak, wewenang, dan kewajiban daerah otonom untuk mengatur dan mengurus sendiri urusan pemerintahan disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Sentralisasi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Otonomi Daerah</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Federalisme</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Monarki</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">9. Salah satu tantangan utama dalam menjaga keutuhan NKRI di era digital adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Kurangnya sumber daya alam</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Penyebaran hoaks dan ujaran kebencian di media sosial</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Jumlah penduduk yang sedikit</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Tidak adanya keberagaman budaya</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">10. Peran siswa dalam menjaga keutuhan NKRI yang paling tepat adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mengikuti tawuran antar pelajar</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Mempelajari Pancasila, menghargai keberagaman, dan berprestasi untuk mengharumkan nama bangsa</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Hanya bangga dengan budaya asing</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Menyebarkan hoaks di media sosial</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">✍️ Bagian B: Essay</h3>
+                    <div class="space-y-6">
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Jelaskan pengertian negara kesatuan dan sebutkan 3 (tiga) ciri-ciri negara kesatuan! (20 Poin)</p>
+                            <textarea id="essay1" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Jelaskan perbedaan antara negara kesatuan dan negara serikat (federal)! Sebutkan masing-masing 2 contoh negara! (20 Poin)</p>
+                            <textarea id="essay2" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Tuliskan bunyi Pasal 1 ayat (1) UUD NRI 1945 dan jelaskan maknanya bagi bentuk negara Indonesia! (20 Poin)</p>
+                            <textarea id="essay3" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Jelaskan sejarah perubahan bentuk negara Indonesia dari NKRI ke RIS dan kembali ke NKRI! Mengapa rakyat Indonesia menolak bentuk federal? (20 Poin)</p>
+                            <textarea id="essay4" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Sebutkan 3 (tiga) tantangan dalam menjaga keutuhan NKRI di era modern dan berikan 3 (tiga) contoh peran siswa dalam menjaga keutuhan NKRI! (20 Poin)</p>
+                            <textarea id="essay5" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div id="hasil-container" class="hidden mb-8 p-6 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl">
+                    <h3 class="text-luxury-gold font-serif text-xl font-bold mb-4 text-center">📊 Hasil Uji Formatif</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-4">
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Pilihan Ganda</p>
+                            <p class="text-2xl font-bold text-white"><span id="skor-pg">0</span> / 100</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Essay</p>
+                            <p class="text-2xl font-bold text-luxury-goldLight">Menunggu Penilaian Guru</p>
+                            <p class="text-xs text-gray-500 mt-1">(Maksimal 100)</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-luxury-gold">
+                            <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Skor Akhir Sementara</p>
+                            <p class="text-3xl font-bold gold-gradient-text"><span id="skor-total">0</span></p>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-400 italic">*Skor total saat ini hanya menghitung Bagian A. Bagian Essay akan dinilai secara manual oleh guru.</p>
+                </div>
+
+                <!-- Tombol Aksi -->
+                <div class="flex flex-col md:flex-row gap-4 no-print">
+                    <button onclick="hitungNilai()" class="flex-1 bg-luxury-gold hover:bg-luxury-goldDark text-luxury-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        KIRIM JAWABAN & LIHAT HASIL
+                    </button>
+                    <button onclick="unduhPDF()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH PDF LENGKAP
+                    </button>
+                    <button onclick="unduhTXT()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH SKOR (TXT)
+                    </button>
+                    <button onclick="kirimEmail()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        KIRIM KE EMAIL GURU
+                    </button>
+                    <button onclick="resetForm()" class="md:w-auto w-full bg-red-900/30 hover:bg-red-900/50 border border-red-500/30 text-red-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        MULAI ULANG
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-800 border-t border-luxury-gold/10 pt-12 pb-8 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="11.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Pertemuan 11
+                </a>
+                <a href="index.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Daftar Isi
+                </a>
+                <a href="13.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    Pertemuan 13
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm mb-2">© 2026 Dewi Sartika, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+                <a href="mailto:mydheby@gmail.com" class="text-luxury-gold hover:text-white transition-colors text-sm">mydheby@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.getElementById('tanggalUjian').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawaban = {
+            q1: 'A',  // Pasal 1 ayat (1)
+            q2: 'B',  // Kedaulatan tunggal, pusat
+            q3: 'B',  // 1949 – 1950
+            q4: 'C',  // Desentralisasi
+            q5: 'B',  // Amerika Serikat
+            q6: 'A',  // Berbeda-beda tetapi tetap satu jua
+            q7: 'C',  // Satu kepala negara & satu konstitusi
+            q8: 'B',  // Otonomi Daerah
+            q9: 'B',  // Hoaks & ujaran kebencian
+            q10: 'B'  // Mempelajari Pancasila, menghargai keberagaman
+        };
+
+        let skorPG = 0;
+        let skorEssay = 0;
+
+        function hitungNilai() {
+            const nama = document.getElementById('namaSiswa').value;
+            const nis = document.getElementById('nisSiswa').value;
+            const kelas = document.getElementById('kelasSiswa').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let benar = 0;
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === kunciJawaban[`q${i}`]) {
+                    benar++;
+                }
+            }
+
+            skorPG = benar * 10;
+            const totalSkor = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').textContent = skorPG;
+            document.getElementById('skor-total').textContent = totalSkor;
+            document.getElementById('hasil-container').classList.remove('hidden');
+            
+            document.getElementById('hasil-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`Terima kasih, ${nama}! Jawaban Pilihan Ganda Anda telah dinilai. Skor sementara: ${totalSkor} (Bagian Essay menunggu penilaian guru).`);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('content-to-print');
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            
+            const opt = {
+                margin: 10,
+                filename: `Uji_Formatif_Pertemuan12_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            const buttons = document.querySelectorAll('.no-print');
+            buttons.forEach(b => b.style.display = 'none');
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                buttons.forEach(b => b.style.display = '');
+            });
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('namaSiswa').value || 'Tidak diisi';
+            const nis = document.getElementById('nisSiswa').value || 'Tidak diisi';
+            const kelas = document.getElementById('kelasSiswa').value || 'Tidak diisi';
+            const tanggal = document.getElementById('tanggalUjian').value || new Date().toLocaleDateString('id-ID');
+
+            let isiTxt = `=== LAPORAN HASIL UJI FORMATIF ===\n`;
+            isiTxt += `Mata Pelajaran: Pendidikan Pancasila\n`;
+            isiTxt += `Pertemuan 12: Indonesia sebagai Negara Kesatuan\n`;
+            isiTxt += `===================================\n\n`;
+            isiTxt += `Nama    : ${nama}\n`;
+            isiTxt += `NIS     : ${nis}\n`;
+            isiTxt += `Kelas   : ${kelas}\n`;
+            isiTxt += `Tanggal : ${tanggal}\n\n`;
+            isiTxt += `--- HASIL PENILAIAN ---\n`;
+            isiTxt += `Skor Pilihan Ganda : ${skorPG} / 100\n`;
+            isiTxt += `Skor Essay         : Menunggu Penilaian Guru (Maks 100)\n`;
+            isiTxt += `Total Skor Sementara: ${skorPG + skorEssay}\n\n`;
+            isiTxt += `--- JAWABAN ESSAY ---\n`;
+            for(let i=1; i<=5; i++) {
+                isiTxt += `Essay ${i}: ${document.getElementById(`essay${i}`).value || '(Tidak dijawab)'}\n\n`;
+            }
+            isiTxt += `===================================\n`;
+            isiTxt += `Dikirim otomatis dari Sistem Uji Formatif Digital\n`;
+            isiTxt += `MTsN 10 Agam | Dewi Sartika, S.Pd`;
+
+            const blob = new Blob([isiTxt], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Ujian_Pertemuan12_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            const kelas = document.getElementById('kelasSiswa').value || 'Kelas';
+            const total = skorPG + skorEssay;
+            
+            const subject = `Laporan Nilai Uji Formatif Pertemuan 12 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Dewi Sartika, S.Pd,\n\nBerikut adalah laporan hasil uji formatif saya:\n\nNama: ${nama}\nKelas: ${kelas}\nMateri: Indonesia sebagai Negara Kesatuan\nSkor Pilihan Ganda: ${skorPG}/100\nSkor Total Sementara: ${total}\n\nMohon konfirmasi untuk penilaian bagian Essay.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:mydheby@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm('Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+                document.querySelectorAll('textarea').forEach(textarea => textarea.value = '');
+                document.getElementById('namaSiswa').value = '';
+                document.getElementById('nisSiswa').value = '';
+                document.getElementById('kelasSiswa').value = '';
+                document.getElementById('tanggalUjian').valueAsDate = new Date();
+                document.getElementById('hasil-container').classList.add('hidden');
+                skorPG = 0;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
