@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 11: Wilayah Negara Kesatuan Republik Indonesia (NKRI) | Pendidikan Pancasila</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            900: '#0B0F19',
+                            800: '#151B2B',
+                            700: '#1E293B',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB',
+                            goldDark: '#AA8C2C',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(21, 27, 43, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-luxury { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+        .custom-radio:checked + div {
+            border-color: #D4AF37;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        .custom-radio:checked + div .radio-dot {
+            background-color: #D4AF37;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .glass-panel { background: white !important; border: 1px solid #ccc !important; color: black !important; }
+            .text-gray-300, .text-gray-400 { color: #333 !important; }
+            .text-white { color: black !important; }
+            .gold-gradient-text { -webkit-text-fill-color: #AA8C2C !important; color: #AA8C2C !important; }
+        }
+        .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #151B2B; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid rgba(212, 175, 55, 0.3);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #D4AF37;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-luxury-900 text-gray-200 font-sans antialiased selection:bg-luxury-gold selection:text-luxury-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-luxury-gold/10 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="10.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span class="font-serif font-semibold">Pertemuan 10</span>
+                </a>
+                <a href="12.html" class="flex items-center gap-2 text-luxury-gold hover:text-white transition-colors">
+                    <span class="font-serif font-semibold">Pertemuan 12</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" id="content-to-print">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-12 border-b border-luxury-gold/20 pb-8">
+            <span class="inline-block px-4 py-1 rounded-full bg-luxury-gold/10 text-luxury-gold text-xs font-bold uppercase tracking-widest mb-4 border border-luxury-gold/20">Bab 3: Negara Kesatuan dan Persatuan</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-4">Pertemuan 11</h1>
+            <h2 class="font-serif text-2xl md:text-3xl gold-gradient-text mb-6">Wilayah Negara Kesatuan Republik Indonesia (NKRI)</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-6">
+                Memahami konsep, batas-batas, dan kedaulatan wilayah Negara Kesatuan Republik Indonesia sebagai negara kepulauan (archipelagic state) terbesar di dunia. Materi ini membahas sejarah pengakuan wilayah Indonesia melalui Deklarasi Djuanda, UNCLOS 1982, pembagian wilayah administratif, serta tantangan menjaga kedaulatan wilayah di era modern.
+            </p>
+            <div class="flex items-center justify-center gap-6 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <span>Dewi Sartika, S.Pd</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <span>MTsN 10 Agam</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section A: Pengertian Wilayah NKRI -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> A. Pengertian Wilayah NKRI
+            </h3>
+            
+            <!-- Teori Pendukung -->
+            <div class="glass-panel p-6 rounded-xl mb-6 border-l-4 border-luxury-gold">
+                <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-luxury-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Teori Pendukung: Konsep Kedaulatan Wilayah
+                </h4>
+                <div class="space-y-3 text-sm text-gray-400">
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Jean Bodin:</strong> Kedaulatan adalah kekuasaan tertinggi untuk menentukan hukum dalam suatu negara. Wilayah merupakan unsur konstitutif negara alongside rakyat dan pemerintah.</span></p>
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Konvensi Montevideo 1933:</strong> Suatu negara harus memiliki 4 unsur: (1) penduduk tetap, (2) wilayah tertentu, (3) pemerintah, dan (4) kemampuan mengadakan hubungan dengan negara lain.</span></p>
+                    <p class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <span><strong class="text-white">Oppeheim-Lauterpacht:</strong> Wilayah negara merupakan ruang tempat berlakunya kedaulatan negara yang bersangkutan, meliputi darat, laut, dan udara.</span></p>
+                </div>
+            </div>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                <strong class="text-white">Wilayah NKRI</strong> adalah keseluruhan ruang negara Indonesia yang meliputi daratan, lautan (laut teritorial, perairan kepulauan, dan ZEE), serta udara di atasnya. Indonesia dikenal sebagai <strong class="text-luxury-gold">negara kepulauan (archipelagic state)</strong> terbesar di dunia dengan lebih dari 17.000 pulau yang terbentang dari Sabang sampai Merauke.
+            </p>
+
+            <!-- Fakta Wilayah Indonesia -->
+            <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    Data Wilayah NKRI
+                </h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10 text-center">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Luas Daratan</p>
+                        <p class="text-white font-bold text-lg">1.904.569 km²</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10 text-center">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Luas Lautan</p>
+                        <p class="text-white font-bold text-lg">3.257.466 km²</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10 text-center">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Jumlah Pulau</p>
+                        <p class="text-white font-bold text-lg">17.000+</p>
+                    </div>
+                    <div class="bg-luxury-900/50 p-3 rounded border border-luxury-gold/10 text-center">
+                        <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Garis Pantai</p>
+                        <p class="text-white font-bold text-lg">81.000 km</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Batas-batas Wilayah -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> B. Batas-batas Wilayah NKRI
+            </h3>
+            
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Wilayah NKRI memiliki batas-batas yang jelas dengan negara tetangga. Secara geografis, Indonesia terletak di antara <strong class="text-white">dua benua</strong> (Asia dan Australia) dan <strong class="text-white">dua samudra</strong> (Hindia dan Pasifik) — posisi strategis yang dikenal sebagai <strong class="text-luxury-gold">posisi silang dunia</strong>.
+            </p>
+
+            <!-- Tabel Batas Wilayah -->
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Arah</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Batas Wilayah</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Negara Tetangga</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Utara</td>
+                            <td class="p-4">Laut Natuna & Laut Sulawesi</td>
+                            <td class="p-4">Vietnam, Kamboja, Thailand, Malaysia, Filipina, Singapura</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Timur</td>
+                            <td class="p-4">Samudra Pasifik</td>
+                            <td class="p-4">Papua Nugini, Timor Leste</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Selatan</td>
+                            <td class="p-4">Samudra Hindia</td>
+                            <td class="p-4">Australia, Timor Leste</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Barat</td>
+                            <td class="p-4">Samudra Hindia</td>
+                            <td class="p-4">India (Kepulauan Andaman & Nikobar)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Batas Administratif -->
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+                <span class="text-luxury-gold">◆</span> Batas Wilayah Menurut Hukum Internasional
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🏝️ Laut Teritorial</h5>
+                    <p class="text-xs text-gray-400">Zona laut selebar <strong class="text-white">12 mil laut</strong> dari garis pangkal. Negara memiliki kedaulatan penuh atas wilayah ini (udara, dasar laut, dan tanah di bawahnya).</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🌊 Zona Tambahan</h5>
+                    <p class="text-xs text-gray-400">Zona selebar <strong class="text-white">12 mil laut</strong> di luar laut teritorial (total 24 mil). Negara berhak melakukan pengawasan untuk mencegah pelanggaran bea cukai, fiskal, imigrasi, dan saniter.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🐟 Zona Ekonomi Eksklusif (ZEE)</h5>
+                    <p class="text-xs text-gray-400">Zona selebar <strong class="text-white">200 mil laut</strong> dari garis pangkal. Negara memiliki hak berdaulat atas kekayaan alam (ikan, mineral), bukan kedaulatan penuh.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🪨 Landas Kontinen</h5>
+                    <p class="text-xs text-gray-400">Dasar laut yang merupakan kelanjutan alamiah dari daratan, dapat mencapai <strong class="text-white">lebih dari 200 mil laut</strong>. Negara berhak mengeksplorasi dan mengeksploitasi sumber daya alam di dasarnya.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Sejarah Pengakuan Wilayah -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> C. Sejarah Pengakuan Wilayah Indonesia
+            </h3>
+
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold mb-6">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Pengakuan wilayah Indonesia sebagai negara kepulauan merupakan perjuangan panjang. Awalnya wilayah Indonesia terpecah-pecah oleh laut internasional di antara pulau-pulau. Melalui <strong class="text-luxury-gold">Deklarasi Djuanda</strong> dan <strong class="text-luxury-gold">UNCLOS 1982</strong>, Indonesia berhasil menyatukan wilayah perairannya.
+                </p>
+            </div>
+
+            <!-- Timeline Sejarah -->
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Kronologi Pengakuan Wilayah Indonesia
+                </h4>
+                <div class="space-y-4">
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">1939 — Ordonansi Hindia Belanda</p>
+                        <p class="text-sm text-gray-300">Laut teritorial hanya <strong class="text-white">3 mil</strong> dari pantai. Pulau-pulau terpisah oleh laut internasional — wilayah Indonesia terpecah-pecah.</p>
+                    </div>
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">13 Desember 1957 — Deklarasi Djuanda</p>
+                        <p class="text-sm text-gray-300">Perdana Menteri <strong class="text-luxury-goldLight">Djuanda Kartawidjaja</strong> mencanangkan konsep <strong class="text-white">Negara Kepulauan</strong>: laut di antara pulau menjadi satu kesatuan wilayah, laut teritorial diperluas menjadi <strong class="text-white">12 mil</strong>.</p>
+                    </div>
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">1960 — UU No. 4 Prp Tahun 1960</p>
+                        <p class="text-sm text-gray-300">Deklarasi Djuanda dikukuhkan menjadi undang-undang, menjadi dasar hukum nasional tentang perairan Indonesia.</p>
+                    </div>
+                    <div class="timeline-item pb-4">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">1982 — UNCLOS (United Nations Convention on the Law of the Sea)</p>
+                        <p class="text-sm text-gray-300">Konvensi PBB tentang Hukum Laut mengakui konsep <strong class="text-white">Negara Kepulauan</strong> yang diperjuangkan Indonesia.</p>
+                    </div>
+                    <div class="timeline-item pb-2">
+                        <p class="text-xs text-luxury-gold uppercase tracking-wider mb-1">1994 — Ratifikasi UNCLOS</p>
+                        <p class="text-sm text-gray-300">Indonesia meratifikasi UNCLOS 1982 melalui <strong class="text-white">UU No. 17 Tahun 1985</strong>, berlaku efektif sejak <strong class="text-luxury-goldLight">16 November 1994</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                <p class="text-sm text-gray-400 italic flex items-start gap-2">
+                    <span class="text-luxury-gold text-lg">💡</span>
+                    <span><strong>Makna Deklarasi Djuanda:</strong> Deklarasi ini menjadi dasar konsep <strong class="text-white">Wawasan Nusantara</strong> — cara pandang bangsa Indonesia tentang diri dan lingkungannya yang serba beragam dan bernilai strategis sebagai satu kesatuan politik, ekonomi, sosial-budaya, serta pertahanan-keamanan.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section D: Pembagian Wilayah Administratif -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> D. Pembagian Wilayah Administratif NKRI
+            </h3>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Berdasarkan <strong class="text-white">UU No. 23 Tahun 2014</strong> tentang Pemerintahan Daerah, wilayah NKRI dibagi atas provinsi-provinsi yang masing-masing dibagi lagi atas kabupaten dan kota. Saat ini Indonesia memiliki <strong class="text-luxury-gold">38 provinsi</strong> (setelah pemekaran provinsi-provinsi baru di Papua pada 2022).
+            </p>
+
+            <!-- Tabel Provinsi -->
+            <h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+                <span class="text-luxury-gold">◆</span> Pembagian Wilayah Menurut Pulau Utama
+            </h4>
+            <div class="overflow-x-auto custom-scrollbar mb-6">
+                <table class="w-full text-left border-collapse glass-panel rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-luxury-gold/10 border-b border-luxury-gold/20">
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Pulau Utama</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Jumlah Provinsi</th>
+                            <th class="p-4 text-luxury-gold font-semibold text-sm uppercase tracking-wider">Contoh Provinsi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-300 divide-y divide-luxury-gold/10">
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Sumatera</td>
+                            <td class="p-4">10 provinsi</td>
+                            <td class="p-4">Aceh, Sumatera Utara, Sumatera Barat, Riau, Jambi, Sumatera Selatan, Bengkulu, Lampung, Bangka Belitung, Kepulauan Riau</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Jawa</td>
+                            <td class="p-4">6 provinsi</td>
+                            <td class="p-4">DKI Jakarta, Jawa Barat, Jawa Tengah, DI Yogyakarta, Jawa Timur, Banten</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kepulauan Nusa Tenggara & Bali</td>
+                            <td class="p-4">3 provinsi</td>
+                            <td class="p-4">Bali, Nusa Tenggara Barat, Nusa Tenggara Timur</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Kalimantan</td>
+                            <td class="p-4">5 provinsi</td>
+                            <td class="p-4">Kalimantan Barat, Tengah, Selatan, Timur, dan Kalimantan Utara</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Sulawesi</td>
+                            <td class="p-4">6 provinsi</td>
+                            <td class="p-4">Sulawesi Utara, Gorontalo, Sulawesi Tengah, Barat, Selatan, Tenggara</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Maluku</td>
+                            <td class="p-4">2 provinsi</td>
+                            <td class="p-4">Maluku, Maluku Utara</td>
+                        </tr>
+                        <tr class="hover:bg-luxury-800/50 transition-colors">
+                            <td class="p-4 font-semibold text-white">Papua</td>
+                            <td class="p-4">6 provinsi</td>
+                            <td class="p-4">Papua, Papua Barat, Papua Selatan, Papua Tengah, Papua Pegunungan, Papua Barat Daya</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                <p class="text-sm text-gray-400 italic flex items-start gap-2">
+                    <span class="text-luxury-gold text-lg">💡</span>
+                    <span><strong>Catatan Khusus:</strong> Provinsi <strong class="text-white">Aceh</strong>, <strong class="text-white">DI Yogyakarta</strong>, <strong class="text-white">Papua</strong>, dan <strong class="text-white">Jakarta</strong> memiliki status khusus atau istimewa dengan kewenangan khusus yang diatur dalam undang-undang tersendiri.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section E: Kedaulatan & Tantangan -->
+        <section class="mb-12">
+            <h3 class="font-serif text-2xl text-luxury-gold mb-6 flex items-center gap-3">
+                <span class="w-8 h-[2px] bg-luxury-gold"></span> E. Kedaulatan dan Tantangan Wilayah NKRI
+            </h3>
+            
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-luxury-gold mb-6">
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Kedaulatan wilayah NKRI mencakup kekuasaan penuh atas wilayah darat, laut, dan udara. Namun, sebagai negara kepulauan terbesar, Indonesia menghadapi berbagai tantangan dalam menjaga keutuhan wilayahnya.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🌊 Potensi Kekayaan Laut</h5>
+                    <p class="text-xs text-gray-400">Indonesia memiliki kekayaan laut luar biasa: ikan, terumbu karang, minyak bumi, gas alam, dan mineral dasar laut yang harus dikelola secara berkelanjutan.</p>
+                </div>
+                <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">⚠️ Sengketa Wilayah</h5>
+                    <p class="text-xs text-gray-400">Beberapa wilayah masih menjadi sengketa dengan negara tetangga, seperti <strong class="text-white">Laut Natuna Utara</strong> dengan klaim Tiongkok, dan beberapa pulau di perbatasan.</p>
+                </div>
+                <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🛡️ Illegal Fishing & Penyelundupan</h5>
+                    <p class="text-xs text-gray-400">Pencurian ikan oleh kapal asing, penyelundupan barang, narkoba, dan perdagangan manusia menjadi ancaman serius bagi kedaulatan maritim.</p>
+                </div>
+                <div class="bg-luxury-900/50 p-4 rounded-lg border border-luxury-gold/10">
+                    <h5 class="text-luxury-gold font-semibold mb-2 text-sm">🌏 Bencana Alam & Perubahan Iklim</h5>
+                    <p class="text-xs text-gray-400">Indonesia berada di <em>Ring of Fire</em>, rawan gempa, tsunami, dan gunung meletus. Kenaikan permukaan laut juga mengancam pulau-pulau kecil.</p>
+                </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border-t-2 border-luxury-gold mb-6">
+                <h4 class="text-luxury-gold font-semibold mb-3 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    Cara Menjaga Kedaulatan Wilayah NKRI
+                </h4>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Memperkuat TNI/Polri</strong> untuk menjaga keamanan wilayah perbatasan.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Diplomasi internasional</strong> melalui perundingan batas wilayah dengan negara tetangga.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Pembangunan daerah tertinggal</strong> di perbatasan untuk memperkuat rasa nasionalisme.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Pendidikan kewarganegaraan</strong> untuk menumbuhkan cinta tanah air sejak dini.</li>
+                    <li class="flex items-start gap-2"><span class="text-luxury-gold mt-1">◆</span> <strong class="text-white">Pengelolaan SDA berkelanjutan</strong> agar kekayaan alam tidak dieksploitasi pihak asing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Terms, Quote & References -->
+        <section class="mb-12">
+            <div class="glass-panel p-6 rounded-xl mb-6">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">◆ Kata Kunci Pertemuan Ini</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Wilayah NKRI</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Negara Kepulauan</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Deklarasi Djuanda</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">UNCLOS 1982</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Laut Teritorial</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">ZEE</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Landas Kontinen</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Wawasan Nusantara</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">Kedaulatan</span>
+                    <span class="px-3 py-1 bg-luxury-gold/10 text-luxury-gold text-xs rounded-full border border-luxury-gold/20">38 Provinsi</span>
+                </div>
+            </div>
+            
+            <div class="text-center p-8 border-t border-b border-luxury-gold/20 bg-luxury-gold/5 rounded-xl mb-6">
+                <p class="font-serif text-xl text-luxury-goldLight italic mb-3">"Hai manusia, sesungguhnya Kami menciptakan kamu dari seorang laki-laki dan seorang perempuan dan menjadikan kamu berbangsa-bangsa dan bersuku-suku supaya kamu saling mengenal..."</p>
+                <p class="text-sm text-luxury-gold font-semibold">— QS. Al-Hujurat [49]: 13</p>
+                <p class="text-xs text-gray-500 mt-2 italic">Ayat ini menegaskan keberagaman bangsa Indonesia sebagai anugerah Allah yang harus dijaga dalam bingkai NKRI.</p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-luxury-gold/10">
+                <h4 class="text-luxury-gold font-serif text-lg font-semibold mb-3">📚 Daftar Referensi Pendukung</h4>
+                <ul class="text-sm text-gray-400 space-y-2 list-decimal list-inside">
+                    <li>Republik Indonesia. (1985). <em>Undang-Undang No. 17 Tahun 1985 tentang Pengesahan UNCLOS 1982</em>.</li>
+                    <li>Republik Indonesia. (2014). <em>Undang-Undang No. 23 Tahun 2014 tentang Pemerintahan Daerah</em>.</li>
+                    <li>Kaelan. (2013). <em>Pendidikan Pancasila</em>. Yogyakarta: Paradigma.</li>
+                    <li>Latif, Yudi. (2011). <em>Negara Paripurna: Historisitas, Rasionalitas, dan Aktualitas Pancasila</em>. Jakarta: Gramedia Pustaka Utama.</li>
+                    <li>Djuanda, D. (1957). <em>Deklarasi Djuanda tentang Perairan Nusantara Indonesia</em>. Jakarta: Sekretariat Negara.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- UJI FORMATIF SECTION -->
+        <section id="uji-formatif" class="mt-16 scroll-mt-24">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl font-bold text-white mb-2">📝 Uji Formatif Pertemuan 11</h2>
+                <p class="text-gray-400 text-sm">Evaluasi Pemahaman Wilayah Negara Kesatuan Republik Indonesia</p>
+                <div class="mt-4 inline-flex items-center gap-4 text-xs text-gray-500 bg-luxury-800 px-4 py-2 rounded-full border border-luxury-gold/10">
+                    <span>📋 Bagian A: Pilihan Ganda (10 soal, 10 poin/soal)</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>✍️ Bagian B: Essay (5 soal, 20 poin/soal)</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 md:p-8 rounded-2xl border border-luxury-gold/20">
+                <!-- Identitas -->
+                <div class="mb-8 pb-6 border-b border-gray-700">
+                    <h3 class="text-luxury-gold font-semibold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
+                        Identitas Siswa
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Nama Lengkap *</label>
+                            <input type="text" id="namaSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">No. Absen / NIS *</label>
+                            <input type="text" id="nisSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors" placeholder="Contoh: 12345">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Kelas *</label>
+                            <select id="kelasSiswa" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                                <option value="">Pilih Kelas</option>
+                                <option value="VII-A">VII-A</option>
+                                <option value="VII-B">VII-B</option>
+                                <option value="VII-C">VII-C</option>
+                                <option value="VII-D">VII-D</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">Tanggal</label>
+                            <input type="date" id="tanggalUjian" class="w-full bg-luxury-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Pilihan Ganda -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">📋 Bagian A: Pilihan Ganda</h3>
+                    <div class="space-y-6" id="mcq-container">
+                        <!-- Soal 1 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Indonesia dikenal sebagai negara kepulauan terbesar di dunia. Jumlah pulau di Indonesia diperkirakan lebih dari...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 5.000 pulau</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 10.000 pulau</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 17.000 pulau</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q1" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 25.000 pulau</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 2 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Deklarasi Djuanda yang mencanangkan konsep negara kepulauan Indonesia diumumkan pada tanggal...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 17 Agustus 1945</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 13 Desember 1957</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 10 November 1982</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q2" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 16 November 1994</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 3 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Konvensi PBB tentang Hukum Laut yang mengakui konsep negara kepulauan Indonesia adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. UNCLOS 1982</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Konvensi Jenewa 1958</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Konvensi Montevideo 1933</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q3" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Konvensi Wina 1969</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 4 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Zona Ekonomi Eksklusif (ZEE) Indonesia adalah zona laut selebar...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 12 mil laut</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 24 mil laut</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 200 mil laut</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q4" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 350 mil laut</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 5 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Saat ini Indonesia memiliki jumlah provinsi sebanyak...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. 27 provinsi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. 33 provinsi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. 34 provinsi</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q5" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. 38 provinsi</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 6 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">6. Dasar laut yang merupakan kelanjutan alamiah dari daratan suatu negara dan memiliki kekayaan mineral disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Landas Kontinen</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Laut Teritorial</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Zona Ekonomi Eksklusif</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q6" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Laut Bebas</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 7 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">7. Indonesia berbatasan langsung dengan negara-negara berikut di sebelah utara, <em>kecuali</em>...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Malaysia</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Singapura</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Filipina</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q7" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Australia</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 8 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">8. Cara pandang bangsa Indonesia mengenai diri dan lingkungannya yang serba beragam dan bernilai strategis sebagai satu kesatuan disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Bhinneka Tunggal Ika</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Wawasan Nusantara</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Ketahanan Nasional</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q8" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Geopolitik Indonesia</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 9 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">9. Letak geografis Indonesia di antara dua benua (Asia dan Australia) dan dua samudra (Hindia dan Pasifik) disebut...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Posisi silang dunia</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Posisi khatulistiwa</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Posisi maritim</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q9" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Posisi agraris</span></label>
+                            </div>
+                        </div>
+
+                        <!-- Soal 10 -->
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">10. Salah satu cara siswa menjaga kedaulatan wilayah NKRI dalam kehidupan sehari-hari adalah...</p>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="A" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">A. Mengikuti tawuran antar pelajar</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="B" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">B. Mempelajari keberagaman budaya dan menumbuhkan rasa cinta tanah air</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="C" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">C. Hanya bangga dengan budaya asing</span></label>
+                                <label class="flex items-center gap-3 cursor-pointer group"><input type="radio" name="q10" value="D" class="custom-radio hidden"><div class="w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center transition-all group-hover:border-luxury-gold"><div class="radio-dot w-2.5 h-2.5 rounded-full bg-transparent"></div></div><span class="text-gray-300 text-sm">D. Mengabaikan pelajaran sejarah dan kewarganegaraan</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Essay -->
+                <div class="mb-8">
+                    <h3 class="text-luxury-gold font-semibold mb-4">✍️ Bagian B: Essay</h3>
+                    <div class="space-y-6">
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">1. Jelaskan pengertian wilayah NKRI dan sebutkan 4 (empat) unsur negara menurut Konvensi Montevideo 1933! (20 Poin)</p>
+                            <textarea id="essay1" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">2. Jelaskan makna Deklarasi Djuanda 13 Desember 1957 bagi wilayah Indonesia! Mengapa deklarasi ini sangat penting bagi negara kepulauan? (20 Poin)</p>
+                            <textarea id="essay2" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">3. Sebutkan dan jelaskan perbedaan antara Laut Teritorial, Zona Ekonomi Eksklusif (ZEE), dan Landas Kontinen! (20 Poin)</p>
+                            <textarea id="essay3" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">4. Sebutkan batas-batas wilayah Indonesia (utara, timur, selatan, barat) beserta negara-negara yang berbatasan! (20 Poin)</p>
+                            <textarea id="essay4" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                        <div class="bg-luxury-900/50 p-4 rounded-lg border border-gray-800">
+                            <p class="text-white font-medium mb-3">5. Berikan 3 (tiga) contoh tindakan nyata yang dapat dilakukan siswa untuk menjaga kedaulatan wilayah NKRI dalam kehidupan sehari-hari! (20 Poin)</p>
+                            <textarea id="essay5" rows="3" class="w-full bg-luxury-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-luxury-gold focus:outline-none transition-colors text-sm" placeholder="Tulis jawaban Anda di sini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasil & Aksi -->
+                <div id="hasil-container" class="hidden mb-8 p-6 bg-luxury-gold/10 border border-luxury-gold/30 rounded-xl">
+                    <h3 class="text-luxury-gold font-serif text-xl font-bold mb-4 text-center">📊 Hasil Uji Formatif</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-4">
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Pilihan Ganda</p>
+                            <p class="text-2xl font-bold text-white"><span id="skor-pg">0</span> / 100</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 text-xs uppercase tracking-wider mb-1">Essay</p>
+                            <p class="text-2xl font-bold text-luxury-goldLight">Menunggu Penilaian Guru</p>
+                            <p class="text-xs text-gray-500 mt-1">(Maksimal 100)</p>
+                        </div>
+                        <div class="bg-luxury-900 p-4 rounded-lg border border-luxury-gold">
+                            <p class="text-luxury-gold text-xs uppercase tracking-wider mb-1">Skor Akhir Sementara</p>
+                            <p class="text-3xl font-bold gold-gradient-text"><span id="skor-total">0</span></p>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-400 italic">*Skor total saat ini hanya menghitung Bagian A. Bagian Essay akan dinilai secara manual oleh guru.</p>
+                </div>
+
+                <!-- Tombol Aksi -->
+                <div class="flex flex-col md:flex-row gap-4 no-print">
+                    <button onclick="hitungNilai()" class="flex-1 bg-luxury-gold hover:bg-luxury-goldDark text-luxury-900 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        KIRIM JAWABAN & LIHAT HASIL
+                    </button>
+                    <button onclick="unduhPDF()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH PDF LENGKAP
+                    </button>
+                    <button onclick="unduhTXT()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        UNDUH SKOR (TXT)
+                    </button>
+                    <button onclick="kirimEmail()" class="flex-1 bg-luxury-800 hover:bg-luxury-700 border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        KIRIM KE EMAIL GURU
+                    </button>
+                    <button onclick="resetForm()" class="md:w-auto w-full bg-red-900/30 hover:bg-red-900/50 border border-red-500/30 text-red-400 font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        MULAI ULANG
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-luxury-800 border-t border-luxury-gold/10 pt-12 pb-8 no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="10.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Pertemuan 10
+                </a>
+                <a href="index.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Daftar Isi
+                </a>
+                <a href="12.html" class="text-gray-400 hover:text-luxury-gold transition-colors flex items-center gap-2">
+                    Pertemuan 12
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm mb-2">© 2026 Dewi Sartika, S.Pd — MTsN 10 Agam. Hak Cipta Dilindungi Undang-Undang.</p>
+                <a href="mailto:mydheby@gmail.com" class="text-luxury-gold hover:text-white transition-colors text-sm">mydheby@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.getElementById('tanggalUjian').valueAsDate = new Date();
+
+        // Kunci Jawaban Pilihan Ganda
+        const kunciJawaban = {
+            q1: 'C',  // 17.000 pulau
+            q2: 'B',  // 13 Desember 1957
+            q3: 'A',  // UNCLOS 1982
+            q4: 'C',  // 200 mil laut
+            q5: 'D',  // 38 provinsi
+            q6: 'A',  // Landas Kontinen
+            q7: 'D',  // Australia (di selatan, bukan utara)
+            q8: 'B',  // Wawasan Nusantara
+            q9: 'A',  // Posisi silang dunia
+            q10: 'B'  // Mempelajari keberagaman budaya
+        };
+
+        let skorPG = 0;
+        let skorEssay = 0;
+
+        function hitungNilai() {
+            const nama = document.getElementById('namaSiswa').value;
+            const nis = document.getElementById('nisSiswa').value;
+            const kelas = document.getElementById('kelasSiswa').value;
+
+            if (!nama || !nis || !kelas) {
+                alert('Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+                return;
+            }
+
+            let benar = 0;
+            for (let i = 1; i <= 10; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === kunciJawaban[`q${i}`]) {
+                    benar++;
+                }
+            }
+
+            skorPG = benar * 10;
+            const totalSkor = skorPG + skorEssay;
+
+            document.getElementById('skor-pg').textContent = skorPG;
+            document.getElementById('skor-total').textContent = totalSkor;
+            document.getElementById('hasil-container').classList.remove('hidden');
+            
+            document.getElementById('hasil-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert(`Terima kasih, ${nama}! Jawaban Pilihan Ganda Anda telah dinilai. Skor sementara: ${totalSkor} (Bagian Essay menunggu penilaian guru).`);
+        }
+
+        function unduhPDF() {
+            const element = document.getElementById('content-to-print');
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            
+            const opt = {
+                margin: 10,
+                filename: `Uji_Formatif_Pertemuan11_${nama.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            const buttons = document.querySelectorAll('.no-print');
+            buttons.forEach(b => b.style.display = 'none');
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                buttons.forEach(b => b.style.display = '');
+            });
+        }
+
+        function unduhTXT() {
+            const nama = document.getElementById('namaSiswa').value || 'Tidak diisi';
+            const nis = document.getElementById('nisSiswa').value || 'Tidak diisi';
+            const kelas = document.getElementById('kelasSiswa').value || 'Tidak diisi';
+            const tanggal = document.getElementById('tanggalUjian').value || new Date().toLocaleDateString('id-ID');
+
+            let isiTxt = `=== LAPORAN HASIL UJI FORMATIF ===\n`;
+            isiTxt += `Mata Pelajaran: Pendidikan Pancasila\n`;
+            isiTxt += `Pertemuan 11: Wilayah Negara Kesatuan Republik Indonesia (NKRI)\n`;
+            isiTxt += `===================================\n\n`;
+            isiTxt += `Nama    : ${nama}\n`;
+            isiTxt += `NIS     : ${nis}\n`;
+            isiTxt += `Kelas   : ${kelas}\n`;
+            isiTxt += `Tanggal : ${tanggal}\n\n`;
+            isiTxt += `--- HASIL PENILAIAN ---\n`;
+            isiTxt += `Skor Pilihan Ganda : ${skorPG} / 100\n`;
+            isiTxt += `Skor Essay         : Menunggu Penilaian Guru (Maks 100)\n`;
+            isiTxt += `Total Skor Sementara: ${skorPG + skorEssay}\n\n`;
+            isiTxt += `--- JAWABAN ESSAY ---\n`;
+            for(let i=1; i<=5; i++) {
+                isiTxt += `Essay ${i}: ${document.getElementById(`essay${i}`).value || '(Tidak dijawab)'}\n\n`;
+            }
+            isiTxt += `===================================\n`;
+            isiTxt += `Dikirim otomatis dari Sistem Uji Formatif Digital\n`;
+            isiTxt += `MTsN 10 Agam | Dewi Sartika, S.Pd`;
+
+            const blob = new Blob([isiTxt], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Skor_Ujian_Pertemuan11_${nama.replace(/\s+/g, '_')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function kirimEmail() {
+            const nama = document.getElementById('namaSiswa').value || 'Siswa';
+            const kelas = document.getElementById('kelasSiswa').value || 'Kelas';
+            const total = skorPG + skorEssay;
+            
+            const subject = `Laporan Nilai Uji Formatif Pertemuan 11 - ${nama} (${kelas})`;
+            const body = `Yth. Ibu Dewi Sartika, S.Pd,\n\nBerikut adalah laporan hasil uji formatif saya:\n\nNama: ${nama}\nKelas: ${kelas}\nMateri: Wilayah Negara Kesatuan Republik Indonesia (NKRI)\nSkor Pilihan Ganda: ${skorPG}/100\nSkor Total Sementara: ${total}\n\nMohon konfirmasi untuk penilaian bagian Essay.\n\nTerima kasih.`;
+            
+            window.location.href = `mailto:mydheby@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        function resetForm() {
+            if(confirm('Apakah Anda yakin ingin mengosongkan semua jawaban dan memulai ulang?')) {
+                document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+                document.querySelectorAll('textarea').forEach(textarea => textarea.value = '');
+                document.getElementById('namaSiswa').value = '';
+                document.getElementById('nisSiswa').value = '';
+                document.getElementById('kelasSiswa').value = '';
+                document.getElementById('tanggalUjian').valueAsDate = new Date();
+                document.getElementById('hasil-container').classList.add('hidden');
+                skorPG = 0;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
